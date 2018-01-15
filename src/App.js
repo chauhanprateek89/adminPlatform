@@ -3,7 +3,8 @@
 	"angularjs-dropdown-multiselect",
 	"ngRoute",
 	"app.core",
-	"toastr"
+	"toastr",
+	
 ]);
 
 app.config(function ($routeProvider, $httpProvider,
