@@ -1,0 +1,77 @@
+
+<style>
+    .img {
+        display:block;
+        margin:auto;
+    }
+</style>
+
+
+
+<div class="page-sidebar-wrapper">
+    <div id="menu" class="page-sidebar navbar-collapse collapse">
+        <ul class="page-sidebar-menu page-sidebar-menu-hover-submenu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+            <li class="sidebar-toggler-wrapper hide">
+                <div class="sidebar-toggler">
+                </div>
+            </li>
+            <li class="sidebar-search-wrapper hide" >
+                <form class="sidebar-search " action="javascript:;">
+                    <a href="javascript:;" class="remove">
+                        <i class="icon-close"></i>
+                    </a>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search...">
+                        <span class="input-group-btn">
+                            <a href="javascript:;" class="btn submit"><i class="icon-magnifier"></i></a>
+                        </span>
+                    </div>
+                </form>
+            </li>
+            <li>
+                <div class="border-primary">
+                    <a  title="Bretzel Bakery">
+                        <img class="img-circle img-responsive" src="/Images/bretzel_logo.jpg" 
+                        onMouseOver="this.src='Images/icon-user.png'" onmouseout="this.src='/Images/bretzel_logo.jpg'"
+                    style="margin: 0 auto; border:1px; padding:10px; border-color:white" height="100px" width="100px">
+                </a>
+                </div>
+            </li>
+            <li class="">
+                <a class="menu-anchor" href="#!home">
+                    <i class="icon-home"></i>
+                    <span class="title">Home</span>
+                    <span class="selected"></span>
+                </a>
+            </li>
+           
+            <li class="">
+                    <a class="menu-anchor" href="#!dashboard">
+                        <i class="icon-pie-chart"></i>
+                        <span class="title">Dashboard</span>
+                        <span class="selected"></span>
+                    </a>
+                </li>
+            <li class="">
+                <a class="menu-anchor" href="#!complianceReport">
+                    <i class="icon-book-open"></i>
+                    <span class="title">Compliance Report</span>
+                    <span class="selected"></span>
+                </a>
+            </li>
+            <li class="">
+                    <a class="menu-anchor" href="#!helloworld">
+                        <i class="icon-cup"></i>
+                        <span class="title">APIs Test</span>
+                        <span class="selected"></span>
+                    </a>
+                </li>
+        </ul>
+    </div>
+</div>
+<script>
+    $('.page-sidebar-menu > li').click(function () {
+        $('.page-sidebar-menu > li.active').removeClass('active');
+        $(this).addClass('active');
+    });
+</script>

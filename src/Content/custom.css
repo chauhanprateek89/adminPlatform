@@ -1,0 +1,343 @@
+.table-data {
+	width: 100%;
+}
+
+.table-data>thead>tr>th {
+	padding: 10px 15px;
+	border: 1px solid #fff;
+	font-weight: 100;
+	background-color: #3fd5c0;
+	color: #fff;
+	text-align: center;
+}
+
+.table-data>tbody>tr>td {
+	padding: 10px 15px;
+	border: 1px solid #eee;
+}
+
+.icon-custom {
+	font-size: 15px;
+	margin-right: 10px;
+	cursor: pointer;
+	color: #000;
+}
+
+.btn-custom {
+	border: 0px;
+	padding: 10px;
+	margin-bottom: 5px;
+}
+
+.btn-custom>i {
+	margin-right: 5px;
+}
+
+.btn-blue {
+	background-color: #00bcd4;
+	color: #fff;
+}
+
+.btn-green {
+	background-color: #32b9a6;
+	color: #fff;
+}
+
+.btn-red {
+	background-color: #ff6565;
+	color: #fff;
+}
+
+.input-custom {
+	padding: 8px;
+	width: 15pc;
+	border: 1px solid #cacaca;
+}
+
+.select-custom {
+	padding: 10px 15px;
+	width: 100%;
+	border: 1px solid #cacaca;
+	border-radius: 4px;
+	background-color: #fbfbfb;
+	line-height: 21px;
+}
+
+.btn-search {
+	background-color: #f0793a;
+	color: #fff;
+	width: 100%;
+	padding: 10px;
+	border: 1px solid;
+}
+
+.btn-search:hover {
+	background-color: #f0793a;
+	color: #fff;
+	border-color: #fff;
+}
+
+.mc-pd {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.mc-pd-l {
+	padding-right: 5px;
+}
+
+.mc-pd-r {
+	padding-left: 5px;
+}
+
+.classic-menu-dropdown>a, .classic-menu-dropdown>a>i {
+	color: #fff !important;
+}
+
+.mega-menu-dropdown>a, .mega-menu-dropdown>a>i {
+	color: #fff !important;
+}
+
+.dataTables_length {
+	float: left;
+}
+
+.dataTables_length>label>select {
+	padding: 7px;
+	border: 1px solid #cacaca;
+}
+
+.dataTables_filter>label>input {
+	padding: 7px;
+	border: 1px solid #cacaca;
+}
+
+.table>thead>tr>th {
+	font-weight: 600;
+	text-align: center;
+	font-size: 14px;
+}
+
+.table-drilldown>tbody>tr>td {
+	padding: 10px 15px;
+}
+
+.col-expand {
+	text-align: center;
+}
+
+.btn-expand {
+	color: #000;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.header-drilldown-color {
+	font-size: 18px;
+	color: #e8373b;
+}
+
+.header-drilldown {
+	font-size: 18px;
+}
+
+.tr-total>td {
+	background-color: #efefef !important;
+}
+
+.button-pdf {
+	background-color: #ff7d7d;
+	padding: 10px 15px;
+	display: inline-block;
+	margin-bottom: 10px;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 3px;
+}
+
+.button-excel {
+	background-color: #1bb19c;
+	padding: 10px 15px;
+	display: inline-block;
+	margin-bottom: 10px;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 3px;
+}
+
+.button-pdf:hover {
+	background-color: #ff6464;
+	color: #fff;
+}
+
+.button-excel:hover {
+	background-color: #139c89;
+	color: #fff;
+}
+
+.border-bot {
+	border-bottom: 1px solid #ddd;
+}
+
+.border-bot>h3>i {
+	color: #e8373b;
+}
+
+.bold-header {
+	color: #528ebd;
+	font-weight: 500;
+	font-size: 14px;
+}
+
+div.dataTables_paginate {
+	float: right;
+	margin: 0;
+	margin-top: -10px;
+}
+
+.active-home {
+	background-color: #427ead;
+}
+
+.report-tile {
+	padding: 25px 10px;
+	text-align: center;
+	background-color: #fff;
+	border-radius: 3px;
+	color: #525252;
+	font-size: 14px;
+	cursor: pointer;
+	border-top: 2px solid #ff9598;
+	margin-bottom: 25px;
+	height: 115px;
+	box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+.report-tile:hover, .report-tile.active {
+	border-top: 2px solid #2e918a;
+	color: #2e918a;
+}
+
+.report-tile:hover > i, .report-tile.active > i {
+	color: #2e918a;
+}
+
+.report-tile>i {
+	display: block !important;
+	font-size: 25px;
+	color: #ff9598;
+	margin-bottom: 15px;
+}
+
+.multiselect-container>li>a {
+	padding: 1px 16px;
+}
+
+.multiselect-native-select>div, .multiselect-native-select>div>button {
+	width: 100%;
+	width: 100%;
+	height: 41px;
+	background-color: #fbfbfb;
+	text-align: left;
+}
+
+button.multiselect>.caret {
+	margin-left: 0;
+	float: right;
+	margin-top: 8px;
+}
+
+button.multiselect>span {
+	font-size: 13px;
+}
+
+.div-set-fav {
+	float: right;
+	margin-right: 15px;
+	margin-top: 8px;
+	font-size: 15px;
+	color: #808080;
+	cursor: pointer;
+}
+
+body {
+	background-color: #384550;
+}
+
+.page-footer .page-footer-inner {
+	color: #ffffff;
+}
+
+.row-filter {
+	margin-bottom: 10px;
+}
+
+.set-fav.active {
+	color: gold;
+}
+
+li > a > div.checkbox > label > input[type="checkbox"] {
+	margin-left: 0;
+}
+
+li > a > div.checkbox > label > span {
+	margin-left: 20px;
+}
+
+.dropdown-header {
+    padding: 3px 5px;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    color: #262626;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+div.ng-isolate-scope > .multiselect-parent {
+	width: 100%;
+	text-align: left;
+}
+
+div.ng-isolate-scope > .multiselect-parent > button {
+	width: 100%;
+	text-align: left;
+	height: 43px;
+	background-color: #fbfbfb;
+	font-size: 13px;
+}
+
+.multiselect-parent > button > span {
+	float: right;
+    margin-top: 8px;
+}
+
+.daterangepicker_input > .form-control {
+	padding-left: 30px;
+}
+
+.daterangepicker_input > .glyphicon-calendar {
+	top: -28px;
+    left: 10px;
+}
+
+.dropdown-menu-form > li > a.ng-binding {
+	padding: 6px 10px;
+}
+
+.input-daterange > .form-control {
+	height: 43px;
+	background-color: #fbfbfb;
+}
+
+.input-daterange > span.input-group-addon {
+	border-left: 0;
+	border-right: 0;
+}
+
+.icon-pull-right {
+	float: right;
+	margin-top: 13px;
+	margin-right: 5px;
+}

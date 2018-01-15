@@ -1,0 +1,441 @@
+﻿.page-content {
+    padding-bottom: 1px !important;
+}
+
+.chat-search-div, .chat-search-div:hover {
+    background: #14b9d6;
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+}
+
+.chat-container {
+    background-color: #fff;
+    margin: 1pc 2pc;
+}
+
+.broadcast .notification {
+    background: #efeff0;
+    border-right: 1px solid #dddddd;
+    padding-left: 0;
+    padding-right: 3px;
+}
+
+    .broadcast .notification .header {
+        padding: 13px 10px;
+        font-size: 16px;
+        font-weight: 600;
+        background: #FFFFFF;
+        margin-bottom: 3px;
+    }
+
+    .broadcast .notification .notification-list {
+        height: 450px;
+        overflow: auto;
+    }
+
+        .broadcast .notification .notification-list .notification-note {
+            background: #ffffff;
+            padding: 10px 5px;
+            margin-bottom: 3px;
+        }
+
+            .broadcast .notification .notification-list .notification-note .notification-reply {
+                padding: 10px;
+                background: #FFFFFF;
+                border: 1px solid #ddd;
+                font-size: 12px;
+                position: relative;
+                margin: 5px 10px;
+                border-radius: 10px !important;
+            }
+
+            .broadcast .notification .notification-list .notification-note.active {
+                background: #f1f2f7;
+                border-left: 4px solid #6c92e3;
+            }
+
+            .broadcast .notification .notification-list .notification-note .notification-reply:after,
+            .broadcast .notification .notification-list .notification-note .notification-reply:before {
+                bottom: 100%;
+                left: 8%;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+            }
+
+            .broadcast .notification .notification-list .notification-note .notification-reply:after {
+                border-bottom-color: white;
+                border-width: 9px;
+                margin-left: -9px;
+            }
+
+            .broadcast .notification .notification-list .notification-note .notification-reply:before {
+                border-bottom-color: #ddd;
+                border-width: 10px;
+                margin-left: -10px;
+            }
+
+            .broadcast .notification .notification-list .notification-note .notification-img {
+                display: inline-block;
+                width: 45px;
+                vertical-align: top;
+            }
+
+                .broadcast .notification .notification-list .notification-note .notification-img img {
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50% !important;
+                }
+
+            .broadcast .notification .notification-list .notification-note .notification-dtl {
+                width: 75%;
+                display: inline-block;
+            }
+
+                .broadcast .notification .notification-list .notification-note .notification-dtl .notification-text {
+                    font-size: 12px;
+                    font-weight: 200;
+                }
+
+                    .broadcast .notification .notification-list .notification-note .notification-dtl .notification-text .notification-date {
+                        font-size: 10px;
+                        font-weight: 200;
+                        display: inline-block;
+                    }
+
+
+.broadcast .broadcast-chat {
+    background: #ffffff;
+    padding: 0;
+    border-left: 1px solid #f1f1f1;
+}
+
+    .broadcast .broadcast-chat .broadcast-user-chat {
+        height: 360px;
+        overflow: auto;
+        padding: 10px 35px;
+    }
+
+        .broadcast .broadcast-chat .broadcast-user-chat .chat {
+            padding: 10px;
+            max-width: 30pc;
+            font-size: 12px;
+            margin: 10px 0;
+        }
+
+            .broadcast .broadcast-chat .broadcast-user-chat .chat .message {
+                width: 100%;
+                font-size: 14px;
+                font-weight: 400;
+                color: #555658;
+                display: block;
+            }
+
+            .broadcast .broadcast-chat .broadcast-user-chat .chat .time {
+                display: block;
+                font-size: 10px;
+                color: #505050;
+            }
+
+            .broadcast .broadcast-chat .broadcast-user-chat .chat.in {
+                background: #f6f6f6;
+                border-radius: 20px 20px 20px 0 !important;
+                float: left;
+            }
+
+            .broadcast .broadcast-chat .broadcast-user-chat .chat.out {
+                color: #555658;
+                background: #dbf4ff;
+                border-radius: 20px 0 20px 20px !important;
+                float: right;
+            }
+
+    .broadcast .broadcast-chat .broadcast-chat-message {
+        background: #dbf4ff;
+        padding: 10px;
+    }
+
+        .broadcast .broadcast-chat .broadcast-chat-message .form-control {
+            border-radius: 0 !important;
+            background: white;
+            border: 0px;
+            height: 36px;
+        }
+
+        .broadcast .broadcast-chat .broadcast-chat-message .btn {
+            border-radius: 0 !important;
+            background: #03A9F4;
+            padding: 6px 20px;
+            color: white;
+            border: 0px;
+        }
+
+        .broadcast .broadcast-chat .broadcast-chat-message .btn {
+            border-radius: 0 !important;
+            background: #14b9d6;
+            padding: 8px 20px;
+            color: white;
+            border: 0px;
+        }
+
+    .broadcast .broadcast-chat .broadcast-chat-user {
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+    }
+
+        .broadcast .broadcast-chat .broadcast-chat-user::before {
+            clear: both;
+        }
+
+        .broadcast .broadcast-chat .broadcast-chat-user .user {
+            width: 100%;
+        }
+
+            .broadcast .broadcast-chat .broadcast-chat-user .user img {
+                width: 45px;
+                height: 45px;
+                border-radius: 50% !important;
+            }
+
+            .broadcast .broadcast-chat .broadcast-chat-user .user .user-badge {
+                font-weight: 300;
+                width: 15px;
+                height: 15px;
+                background: limegreen;
+                border-radius: 50% !important;
+                display: block;
+            }
+
+.online-circle {
+    color: limegreen;
+}
+
+.broadcast .broadcast-list {
+    background-color: #fff;
+    padding: 0;
+}
+
+    .broadcast .broadcast-list .broadcast-search {
+        padding: 20px;
+        background-color: #dbf4ff;
+        border-bottom: 1px solid #dbf4ff;
+    }
+
+
+.broadcast .form-control {
+    background: white;
+    border: 0px #c6e6ff;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 5px;
+}
+
+.btn-send {
+    font-size: 13px;
+    padding: 8px !important;
+    border-radius: 0px !important;
+    border: 0px;
+}
+
+.broadcast .broadcast-list .broadcast-usr-list {
+    max-height: 492px;
+    overflow: auto;
+}
+
+    .broadcast .broadcast-list .broadcast-usr-list .broadcast-usr {
+        padding: 10px 20px 10px 20px;
+        cursor: pointer;
+        border-bottom: 1px solid #eee;
+    }
+
+        .broadcast .broadcast-list .broadcast-usr-list .broadcast-usr.active,
+        .broadcast .broadcast-list .broadcast-usr-list .broadcast-usr:hover {
+            background: #f9fafc;
+        }
+
+        .broadcast .broadcast-list .broadcast-usr-list .broadcast-usr .broadcast-usr-img {
+            display: inline-block;
+            width: 45px;
+            vertical-align: top;
+        }
+
+            .broadcast .broadcast-list .broadcast-usr-list .broadcast-usr .broadcast-usr-img img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50% !important;
+            }
+
+        .broadcast .broadcast-list .broadcast-usr-list .broadcast-usr .broadcast-usr-dtl {
+            width: 81%;
+            margin-left: 10px;
+            display: inline-block;
+            vertical-align: -webkit-baseline-middle;
+        }
+
+            .broadcast .broadcast-list .broadcast-usr-list .broadcast-usr .broadcast-usr-dtl::before {
+                clear: both;
+            }
+
+
+            .broadcast .broadcast-list .broadcast-usr-list .broadcast-usr .broadcast-usr-dtl .user-name {
+                font-size: 15px;
+                font-weight: 400;
+                float: left;
+            }
+
+            .broadcast .broadcast-list .broadcast-usr-list .broadcast-usr .broadcast-usr-dtl .active-msg {
+                background-color: #32cd32;
+                border-radius: 50% !important;
+                width: 10px;
+                height: 10px;
+                display: inline-block;
+                margin-top: 6px;
+                float: right;
+            }
+
+            .broadcast .broadcast-list .broadcast-usr-list .broadcast-usr .broadcast-usr-dtl .inactive-msg {
+                background-color: #c5c5c5;
+                border-radius: 50% !important;
+                width: 10px;
+                height: 10px;
+                display: inline-block;
+                margin-top: 6px;
+                float: right;
+            }
+
+            .broadcast .broadcast-list .broadcast-usr-list .broadcast-usr .broadcast-usr-dtl .user-last-login {
+                font-size: 12px;
+                font-weight: 100;
+                float: right;
+            }
+
+            .broadcast .broadcast-list .broadcast-usr-list .broadcast-usr .broadcast-usr-dtl .user-status {
+                font-size: 14px;
+                font-weight: 200;
+                width: 83%;
+                display: inline-block;
+            }
+
+            .broadcast .broadcast-list .broadcast-usr-list .broadcast-usr .broadcast-usr-dtl .msg-count {
+                font-size: 12px;
+                font-weight: 600;
+                background-color: #6bbdff;
+                color: white;
+                vertical-align: top;
+                text-align: center;
+                border-radius: 10px !important;
+                max-width: 14%;
+                padding: 1px 3px;
+                min-width: 7%;
+                float: right;
+                display: inline-block;
+            }
+
+.row.broadcast {
+    border-radius: 8px !important;
+    overflow: hidden;
+}
+
+.label-mainname {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.div-notification {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-left: 1px solid #eee;
+}
+
+.notification-header {
+    background-color: #dbdfff;
+    padding: 24px 15px;
+    border-bottom: 1px solid #dbdfff;
+}
+
+.close-window {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px !important;
+    font-weight: 100;
+    color: #9c9c9c;
+}
+
+.notification-body {
+    height: 449px;
+    overflow: auto;
+    background-color: #fff;
+}
+
+.add-pad {
+    padding: 10px 20px;
+}
+
+@media (max-width: 767px) {
+    .add-pad {
+        padding: 10px 0 !important;
+    }
+
+    .div-sendbutton {
+        margin-top: 15px;
+        align-content: center;
+    }
+
+    .div-notification, .broadcast-chat {
+        margin-top: 15px;
+    }
+
+    .broadcast {
+        padding: 0 30px;
+    }
+}
+
+.notify-usr {
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.notify-usr-img {
+    display: inline-block;
+    width: 35px;
+    vertical-align: top;
+}
+
+.notify-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50% !important;
+}
+
+.notify-message {
+    width: 78%;
+    display: inline-block;
+}
+
+.notify-text {
+    font-size: 13px;
+    font-weight: 400;
+    float: left;
+    margin-top: 4px;
+}
+
+.input-group {
+    border-radius: 8px !important;
+    overflow: hidden;
+}
+
+.no-message {
+    width: 20pc;
+    margin-top: 3pc;
+}
+
+.icon-unread {
+    float: right;
+    font-size: 10px;
+    color: #36ccff;
+}

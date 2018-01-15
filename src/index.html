@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="cognitionApp">
+
+<head>
+	<style type="text/css">
+		#toast-container .toast {
+			z-index: 100000 !important;
+			margin-top: 53px !important;
+		}
+	</style>
+	<title>Cognition Dashboard</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"
+	/>
+	<!-- <link rel="shortcut icon" href="/Images/favicon.ico"  type=”image/x-icon” /> -->
+	<link rel="shortcut icon" href="/Images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/Images/favicon.ico" type="image/x-icon">
+
+	<link href="Asset/libs/waitMe/waitMe.min.css" rel="stylesheet" type="text/css" />
+	<link href="Asset/libs/toastr/angular-toastr.min.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="Scripts/jquery-3.2.1.js"></script>
+	<script src="Scripts/angular.min.js"></script>
+
+	<script src="Scripts/angular-route.js"></script>
+	<script src="Asset/libs/ocLazyLoad/ocLazyLoad.min.js"></script>
+	<script src="Asset/libs/angularjs-dropdown-multiselect/angularjs-dropdown-multiselect.js"></script>
+	<script src="Asset/libs/waitMe/waitMe.min.js"></script>
+	<script src="Asset/libs/toastr/angular-toastr.tpls.min.js"></script>
+	<script src="Asset/libs/spinner.js"></script>
+
+	<script src="App.js"></script>
+	<ng:include src="'App/Views/Shared/stylesheet.html'"></ng:include>
+</head>
+
+<body class="page-sidebar-menu  page-header-fixed page-sidebar-menu-light">
+	<div class="page-header -i navbar navbar-header ">
+		<ng:include src="'App/Views/Shared/header.html'"></ng:include>
+	</div>
+	<div class="clearfix"></div>
+	<div class="page-container">
+		<div class="page-content-wrapper">
+			<ng:include src="'App/Views/Shared/sidebar.html'"></ng:include>
+			<div class="page-content" >
+				<div class="row" ng-view ></div>
+			</div>
+		</div>
+	</div>
+	<ng:include src="'App/Views/Shared/footer.html'"></ng:include>
+
+	<ng:include src="'App/Views/Shared/script.html'"></ng:include>
+	<script src="Scripts/metronic.js"></script>
+	<script src="Scripts/layout.js"></script>
+	<script src="App/Controllers/Common/common.js"></script>
+
+	<script src="App/Controllers/constant.js"></script>
+</body>
+
+</html>

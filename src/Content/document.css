@@ -1,0 +1,161 @@
+﻿.doc-container {
+    background-color: #fff;
+}
+
+.ul-inner {
+    -webkit-padding-start: 5px;
+}
+
+.ul-project {
+    overflow: auto;
+    height: 450px;
+    border-right: 1px solid #eee;
+    -webkit-padding-start: 5px;
+}
+
+
+    .ul-project > li, .ul-inner > li {
+        padding: 10px 5px 10px 20px;
+        border-bottom: 1px solid #eee;
+        font-size: 14px;
+        list-style: none;
+        cursor: pointer;
+    }
+
+        .ul-project > .li-folder:hover, .ul-inner > li.li-task:hover {
+            background-color: #f9f9f9;
+        }
+
+        .ul-project > li > i, .ul-inner > li > i {
+            margin-right: 15px;
+        }
+
+        .ul-project > .li-active-folder, .ul-inner > .li-active-folder {
+            background-color: #f9f9f9;
+        }
+
+.li-head {
+    font-size: 13px !important;
+    color: #afafaf;
+}
+
+.li-active {
+    background-color: #14B9D6;
+    color: #fff;
+}
+
+    .li-active:hover {
+        background-color: #13a7c1 !important;
+    }
+
+.table-document {
+    width: 100%;
+}
+
+    .table-document > thead > tr > td {
+        padding: 15px 5px;
+        font-weight: 600;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+    }
+
+    .table-document > tbody > tr > td {
+        padding: 15px 5px;
+        font-weight: 200;
+        text-align: left;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+        .table-document > tbody > tr > td > a {
+            font-weight: 400;
+        }
+
+    .table-document > tbody > tr:hover {
+        background-color: #f9f9f9;
+    }
+
+.width50 {
+    width: 50px;
+}
+
+.doc-body {
+    overflow: auto;
+    height: 450px;
+}
+
+.td-icon {
+    text-align: center !important;
+    width: 10%;
+}
+
+.icon-trash {
+    color: #ff5d5d;
+}
+
+.img-google {
+    background-color: #ff5f5f;
+    text-align: center;
+    padding: 8px;
+    color: #ffffff;
+    border-radius: 40px;
+    width: 32px;
+}
+
+.img-file {
+    background-color: #719fa7;
+    text-align: center;
+    padding: 8px;
+    color: #ffffff;
+    border-radius: 40px;
+    width: 32px;
+}
+
+.img-dropbox {
+    background-color: #14b9d6;
+    text-align: center;
+    padding: 8px;
+    color: #ffffff;
+    border-radius: 40px;
+    width: 32px;
+}
+
+.img-onedrive {
+    background-color: #4489b7;
+    text-align: center;
+    padding: 8px;
+    color: #ffffff;
+    border-radius: 40px;
+    width: 32px;
+}
+
+i.doc-action {
+    margin-top: 3px;
+    color: #14b9d6;
+    cursor: pointer;
+    float: right;
+}
+
+.li-active > i.doc-action {
+    color: #fff;
+}
+
+.tr-border {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.ul-options {
+    margin-right: 35px;
+}
+
+    .ul-options > li {
+        text-align: left;
+    }
+
+    .ul-options:before {
+        display: none;
+    }
+
+.li-task {
+    padding-left: 40px !important;
+}

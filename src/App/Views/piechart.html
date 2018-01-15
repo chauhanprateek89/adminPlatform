@@ -1,0 +1,44 @@
+<div class="col-md-12">
+	<div class="page-bar">
+		<ul class="page-breadcrumb">
+			<li><i class="icon-bar-chart"></i> <a href="javascript:;">{{
+					pageLevel1 }}</a> <i class="fa fa-angle-right"></i></li>
+			<li><a href="javascript:;">{{ pageLevel2 }}</a> <i
+				class="fa fa-angle-right"></i></li>
+			<li><a href="javascript:;">{{ pageLevel3 }}</a></li>
+		</ul>
+		<div class="div-set-fav">
+			<label>Set as Favourite</label> <i class="fa fa-star set-fav"></i>
+		</div>
+	</div>
+</div>
+<div class="col-md-12" style="background: #fff; margin-bottom: 10px">
+	<ng-include src="filterTemplate"></ng-include>
+</div>
+
+<div class="col-md-12">
+	<div class="col-md-12" style="background: #F1F3FA; padding: 15px">
+		<!-- BEGIN PORTLET-->
+		<div class="portlet light">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="icon-share font-green-haze hide"></i> <span
+						class="caption-subject font-green-haze bold uppercase">{{
+						TitleName }}</span> <span class="caption-helper"></span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div id="div_piechart" style="width: 100%; height: 20pc;"></div>
+			</div>
+		</div>
+		<!-- END PORTLET-->
+	</div>
+</div>
+<script src="App/Controllers/Common/echarts.js"></script>
+<script src="Scripts/echarts.common.min.js"></script>
+<script>
+	$('.set-fav').click(function() {
+		$(this).addClass('active');
+		$(this).closest('.div-set-fav').find('label').html('Favourite');
+	});
+</script>

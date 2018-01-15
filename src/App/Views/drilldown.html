@@ -1,0 +1,391 @@
+<div class="col-md-12">
+	<div class="page-bar">
+		<ul class="page-breadcrumb">
+			<li><i class="fa fa-table"></i> <a href="javascript:;">{{
+					pageLevel1 }}</a> <i class="fa fa-angle-right"></i></li>
+			<li><a href="javascript:;">{{ pageLevel2 }}</a> <i
+				class="fa fa-angle-right"></i></li>
+			<li><a href="javascript:;">{{ pageLevel3 }}</a></li>
+		</ul>
+		<div class="div-set-fav">
+			<label>Set as Favourite</label> <i class="fa fa-star set-fav"></i>
+		</div>
+	</div>
+</div>
+<div class="col-md-12" style="background: #fff; margin-bottom: 10px">
+	<ng-include src="filterTemplate"></ng-include>
+</div>
+<div class="col-md-12" style="background: #fff; margin-bottom: 10px">
+	<div id="table1">
+		<div class="row">
+			<div class="col-md-12">
+				<div align="right">
+					<a class="button-pdf"><i class="fa fa-file-pdf-o"></i></a> <a
+						class="button-excel"><i class="fa fa-file-excel-o"></i></a>
+				</div>
+				<table class="table table-bordered table-drilldown"
+					id="tabledrilldown">
+					<thead>
+						<tr>
+							<th ng-repeat="head in table1_head" width="'{{head.Width}}'">{{head.Name}}</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="(index, row) in table1_rows">
+							<td ng-repeat="column in table1_cols">
+								<div class="col-expand" ng-if="row[column] == 'expand_col'">
+									<i ng-click="expandTable2({{idList1[index]}})"
+										class="icon-plus btn-expand icon-level1"></i>
+								</div>
+								<div ng-if="row[column] != 'expand_col'">
+									<div align="{{colAlign1[0][column]}}">
+										<label>{{row[column]}}</label>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="row" ng-show="table1_hasPaging">
+			<div class="col-md-5 col-sm-12">
+				<div class="dataTables_info" id="sample_3_info" role="status"
+					aria-live="polite">Showing 1 to 10 of 35 entries</div>
+			</div>
+			<div class="col-md-7 col-sm-12">
+				<div class="dataTables_paginate paging_simple_numbers">
+					<ul class="pagination">
+						<li class="paginate_button previous disabled"
+							aria-controls="sample_3" tabindex="0"><a href="#"><i
+								class="fa fa-angle-left"></i></a></li>
+						<li class="paginate_button active" aria-controls="sample_3"
+							tabindex="0"><a href="#">1</a></li>
+						<li class="paginate_button " aria-controls="sample_3" tabindex="0"><a
+							href="#">2</a></li>
+						<li class="paginate_button " aria-controls="sample_3" tabindex="0"><a
+							href="#">3</a></li>
+						<li class="paginate_button next" aria-controls="sample_3"
+							tabindex="0" id="sample_3_next"><a href="#"><i
+								class="fa fa-angle-right"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="table2" style="display: none">
+	 <div align="right">
+					<a class="button-pdf"><i class="fa fa-file-pdf-o"></i></a> <a
+						class="button-excel"><i class="fa fa-file-excel-o"></i></a>
+	</div>
+		<div class="row">
+			<div class="col-md-12">
+				<label class="header-drilldown-color">{{table2_headerName}}</label>
+				<label class="header-drilldown">{{table2_headerValue}}</label>
+				<table class="table table-bordered table-drilldown">
+					<thead>
+						<tr>
+							<th ng-repeat="head in table2_head" width="'{{head.Width}}'">{{head.Name}}</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="row in table2_rows">
+							<td ng-repeat="column in table2_cols">
+								<div class="col-expand" ng-if="row[column] == 'expand_col'">
+									<i ng-click="expandTable3()"
+										class="icon-plus btn-expand icon-level1"></i>
+								</div>
+
+								<div ng-if="row[column] != 'expand_col'">
+									<div align="{{colAlign2[0][column]}}">
+										<label>{{row[column]}}</label>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="row" ng-show="table2_hasPaging">
+			<div class="col-md-5 col-sm-12">
+				<div class="dataTables_info" id="sample_3_info" role="status"
+					aria-live="polite">Showing 1 to 10 of 35 entries</div>
+			</div>
+			<div class="col-md-7 col-sm-12">
+				<div class="dataTables_paginate paging_simple_numbers">
+					<ul class="pagination">
+						<li class="paginate_button previous disabled"
+							aria-controls="sample_3" tabindex="0"><a href="#"><i
+								class="fa fa-angle-left"></i></a></li>
+						<li class="paginate_button active" aria-controls="sample_3"
+							tabindex="0"><a href="#">1</a></li>
+						<li class="paginate_button " aria-controls="sample_3" tabindex="0"><a
+							href="#">2</a></li>
+						<li class="paginate_button " aria-controls="sample_3" tabindex="0"><a
+							href="#">3</a></li>
+						<li class="paginate_button next" aria-controls="sample_3"
+							tabindex="0" id="sample_3_next"><a href="#"><i
+								class="fa fa-angle-right"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="table3" style="display: none">
+	 <div align="right">
+					<a class="button-pdf"><i class="fa fa-file-pdf-o"></i></a> <a
+						class="button-excel"><i class="fa fa-file-excel-o"></i></a>
+	</div>
+		<div class="row">
+			<div class="col-md-12">
+				<label class="header-drilldown-color">{{table3_headerName}}</label>
+				<label class="header-drilldown">{{table3_headerValue}}</label>
+				<table class="table table-bordered table-drilldown">
+					<thead>
+						<tr>
+							<th ng-repeat="head in table3_head" width="'{{head.Width}}'">{{head.Name}}</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="row in table3_rows">
+							<td ng-repeat="column in table3_cols">
+								<div class="col-expand" ng-if="row[column] == 'expand_col'">
+									<i ng-click="expandTable4()"
+										class="icon-plus btn-expand icon-level1"></i>
+								</div>
+
+								<div ng-if="row[column] != 'expand_col'">
+									<div align="{{colAlign3[0][column]}}">
+										<label>{{row[column]}}</label>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="row" ng-show="table3_hasPaging">
+			<div class="col-md-5 col-sm-12">
+				<div class="dataTables_info" id="sample_3_info" role="status"
+					aria-live="polite">Showing 1 to 10 of 35 entries</div>
+			</div>
+			<div class="col-md-7 col-sm-12">
+				<div class="dataTables_paginate paging_simple_numbers">
+					<ul class="pagination">
+						<li class="paginate_button previous disabled"
+							aria-controls="sample_3" tabindex="0"><a href="#"><i
+								class="fa fa-angle-left"></i></a></li>
+						<li class="paginate_button active" aria-controls="sample_3"
+							tabindex="0"><a href="#">1</a></li>
+						<li class="paginate_button " aria-controls="sample_3" tabindex="0"><a
+							href="#">2</a></li>
+						<li class="paginate_button " aria-controls="sample_3" tabindex="0"><a
+							href="#">3</a></li>
+						<li class="paginate_button next" aria-controls="sample_3"
+							tabindex="0" id="sample_3_next"><a href="#"><i
+								class="fa fa-angle-right"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="table4" style="display: none">
+	 <div align="right">
+					<a class="button-pdf"><i class="fa fa-file-pdf-o"></i></a> <a
+						class="button-excel"><i class="fa fa-file-excel-o"></i></a>
+	</div>
+		<div class="row">
+			<div class="col-md-12">
+				<label class="header-drilldown-color">{{table4_headerName}}</label>
+				<label class="header-drilldown">{{table4_headerValue}}</label>
+				<table class="table table-bordered table-drilldown">
+					<thead>
+						<tr>
+							<th ng-repeat="head in table4_head" width="'{{head.Width}}'">{{head.Name}}</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="row in table4_rows">
+							<td ng-repeat="column in table4_cols">
+								<div class="col-expand" ng-if="row[column] == 'expand_col'">
+									<i ng-click="expandTable5()"
+										class="icon-plus btn-expand icon-level1"></i>
+								</div>
+
+								<div ng-if="row[column] != 'expand_col'">
+									<div align="{{colAlign4[0][column]}}">
+										<label>{{row[column]}}</label>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="row" ng-show="table4_hasPaging">
+			<div class="col-md-5 col-sm-12">
+				<div class="dataTables_info" id="sample_4_info" role="status"
+					aria-live="polite">Showing 1 to 10 of 35 entries</div>
+			</div>
+			<div class="col-md-7 col-sm-12">
+				<div class="dataTables_paginate paging_simple_numbers">
+					<ul class="pagination">
+						<li class="paginate_button previous disabled"
+							aria-controls="sample_4" tabindex="0"><a href="#"><i
+								class="fa fa-angle-left"></i></a></li>
+						<li class="paginate_button active" aria-controls="sample_4"
+							tabindex="0"><a href="#">1</a></li>
+						<li class="paginate_button " aria-controls="sample_4" tabindex="0"><a
+							href="#">2</a></li>
+						<li class="paginate_button " aria-controls="sample_4" tabindex="0"><a
+							href="#">3</a></li>
+						<li class="paginate_button next" aria-controls="sample_4"
+							tabindex="0" id="sample_4_next"><a href="#"><i
+								class="fa fa-angle-right"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<div id="table5" style="display: none">
+ <div align="right">
+					<a class="button-pdf"><i class="fa fa-file-pdf-o"></i></a> <a
+						class="button-excel"><i class="fa fa-file-excel-o"></i></a>
+	</div>
+		<div class="row">
+			<div class="col-md-12">
+				<label class="header-drilldown-color">{{table5_headerName}}</label>
+				<label class="header-drilldown">{{table5_headerValue}}</label>
+				<table class="table table-bordered table-drilldown">
+					<thead>
+						<tr>
+							<th ng-repeat="head in table5_head" width="'{{head.Width}}'">{{head.Name}}</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="row in table5_rows">
+							<td ng-repeat="column in table5_cols">
+								<div class="col-expand" ng-if="row[column] == 'expand_col'">
+									<i ng-click="expandTable6()"
+										class="icon-plus btn-expand icon-level1"></i>
+								</div>
+
+								<div ng-if="row[column] != 'expand_col'">
+									<div align="{{colAlign5[0][column]}}">
+										<label>{{row[column]}}</label>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="row" ng-show="table5_hasPaging">
+			<div class="col-md-5 col-sm-12">
+				<div class="dataTables_info" id="sample_5_info" role="status"
+					aria-live="polite">Showing 1 to 10 of 35 entries</div>
+			</div>
+			<div class="col-md-7 col-sm-12">
+				<div class="dataTables_paginate paging_simple_numbers">
+					<ul class="pagination">
+						<li class="paginate_button previous disabled"
+							aria-controls="sample_4" tabindex="0"><a href="#"><i
+								class="fa fa-angle-left"></i></a></li>
+						<li class="paginate_button active" aria-controls="sample_5"
+							tabindex="0"><a href="#">1</a></li>
+						<li class="paginate_button " aria-controls="sample_5" tabindex="0"><a
+							href="#">2</a></li>
+						<li class="paginate_button " aria-controls="sample_5" tabindex="0"><a
+							href="#">3</a></li>
+						<li class="paginate_button next" aria-controls="sample_5"
+							tabindex="0" id="sample_5_next"><a href="#"><i
+								class="fa fa-angle-right"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="table6" style="display: none">
+	 <div align="right">
+					<a class="button-pdf"><i class="fa fa-file-pdf-o"></i></a> <a
+						class="button-excel"><i class="fa fa-file-excel-o"></i></a>
+	</div>
+		<div class="row">
+			<div class="col-md-12">
+				<label class="header-drilldown-color">{{table6_headerName}}</label>
+				<label class="header-drilldown">{{table6_headerValue}}</label>
+				<table class="table table-bordered table-drilldown">
+					<thead>
+						<tr>
+							<th ng-repeat="head in table6_head" width="'{{head.Width}}'">{{head.Name}}</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="row in table6_rows">
+							<td ng-repeat="column in table6_cols" align="{{colAlign6[0][column]}}">
+								<div>
+									<label>{{row[column]}}</label>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="row" ng-show="table6_hasPaging">
+			<div class="col-md-5 col-sm-12">
+				<div class="dataTables_info" role="status" aria-live="polite">Showing
+					1 to 10 of 35 entries</div>
+			</div>
+			<div class="col-md-7 col-sm-12">
+				<div class="dataTables_paginate paging_simple_numbers">
+					<ul class="pagination">
+						<li class="paginate_button previous disabled"
+							aria-controls="sample_6" tabindex="0"><a href="#"><i
+								class="fa fa-angle-left"></i></a></li>
+						<li class="paginate_button active" aria-controls="sample_6"
+							tabindex="0"><a href="#">1</a></li>
+						<li class="paginate_button " aria-controls="sample_6" tabindex="0"><a
+							href="#">2</a></li>
+						<li class="paginate_button " aria-controls="sample_6" tabindex="0"><a
+							href="#">3</a></li>
+						<li class="paginate_button next" aria-controls="sample_6"
+							tabindex="0" id="sample_6_next"><a href="#"><i
+								class="fa fa-angle-right"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	var start = moment().subtract(29, 'days');
+	var end = moment();
+	$('input[name="daterange"]').daterangepicker({
+		startDate : start,
+		endDate : end,
+		ranges : {
+			'Today' : [ moment(), moment() ],
+			'Last 3 Months' : [ moment().subtract(3, 'months'), moment() ],
+			'Last 6 Months' : [ moment().subtract(6, 'months'), moment() ],
+			'Last 9 Months' : [ moment().subtract(9, 'months'), moment() ],
+			'Last 12 Months' : [ moment().subtract(12, 'months'), moment() ],
+		},
+		locale : {
+			format : 'DD MMM YYYY'
+		}
+	});
+	$('.set-fav').click(function() {
+		$(this).addClass('active');
+		$(this).closest('.div-set-fav').find('label').html('Favourite');
+	});
+</script>

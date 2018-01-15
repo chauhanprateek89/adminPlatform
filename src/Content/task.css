@@ -1,0 +1,482 @@
+﻿.icon-task {
+    font-size: 20px;
+    margin-top: 5px;
+    color: #14b9d6;
+    margin-right: 5px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.add-notes {
+    text-align: left;
+}
+
+.div-assigned {
+    min-height: 32px;
+}
+
+.icon-delete {
+    font-size: 20px;
+    margin-top: 5px;
+    color: #ffa4a4;
+    margin-right: 5px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.task-high {
+    border-top: 4px solid #ffa4a4;
+}
+
+.task-med {
+    border-top: 4px solid #ffcca8;
+}
+
+.task-low {
+    border-top: 4px solid #8fef68;
+}
+
+.modal-lg {
+    width: 900px;
+}
+
+.icon-tab.inactive {
+    color: #cbcbcb;
+    line-height: 31px;
+}
+
+.icon-tab.active {
+    color: #14b9d6;
+    border-bottom: 4px solid #14b9d6;
+    line-height: 31px;
+}
+
+.modal-header {
+    padding-bottom: 0px;
+}
+
+.icon-tab {
+    font-size: 20px;
+    margin-top: 5px;
+    color: #14b9d6;
+    margin-right: 5px;
+    margin-left: 15px;
+    cursor: pointer;
+    width: 30px;
+    text-align: center;
+    width: 40px;
+}
+
+.input-taskname {
+    width: 100%;
+    padding: 10px 10px;
+    border: 0px;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+}
+
+.input-taskdesc {
+    width: 100%;
+    padding: 10px 10px;
+    border: 0px;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 15px;
+    border-bottom: 1px solid #eee;
+    resize: none;
+    height: 8pc;
+}
+
+.input-notedesc {
+    width: 100%;
+    padding: 10px 10px;
+    border: 0px;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 15px;
+    border-bottom: 1px solid #eee;
+    resize: none;
+}
+
+.input-search {
+    width: 100%;
+    padding: 10px 10px;
+    border: 0px;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.input-startdate, .input-endate {
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: 0px;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+.input-search {
+    border-bottom: 1px solid #eee;
+}
+
+.input-status {
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: 0px;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+.input-icon > .input-startdate, .input-icon > .input-endate, .input-icon > .input-search {
+    padding-left: 33px;
+}
+
+.input-icon > i {
+    margin: 27px 2px 4px 10px;
+}
+
+.input-icon-search {
+    margin: 13px 2px 4px 10px !important;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .task-list > li {
+        position: relative;
+        padding: 10px 0;
+        border-bottom: 1px solid #f1f1f1;
+    }
+
+        .task-list > li:hover {
+            background-color: #f1f1f1;
+        }
+
+        .task-list > li > .task-checkbox {
+            float: left;
+            width: 30px;
+        }
+
+        .task-list > li > .task-title {
+            color: #838fa1;
+            margin-right: 20px;
+            margin-left: 0px;
+        }
+
+.img-member {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.task-list > li > .task-title .task-title-sp {
+    margin-right: 5px;
+}
+
+.bootstrap-select .btn {
+    border-color: transparent !important;
+}
+
+.btn-group.bootstrap-select > button {
+    background-color: #ebebeb !important;
+}
+
+.task-createdby {
+    font-size: 10px;
+}
+
+.div-attachment {
+    height: 18pc;
+    text-align: center;
+    padding-top: 4pc;
+}
+
+.label-signin {
+    display: block;
+    font-size: 24px;
+    font-weight: normal;
+    color: #222;
+}
+
+.label-signup {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.btn-signin, .label-signup {
+    margin-top: 25px;
+}
+
+.btn-dropbox {
+    background-color: #2297b9;
+    border: #2297b9;
+}
+
+.width160 {
+    width: 160px;
+}
+
+.div-notes {
+    text-align: center;
+    height: 20pc;
+}
+
+.div-note {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0px;
+    text-align: left;
+}
+
+.label-note {
+    display: block;
+    text-align: justify;
+    margin-left: 55px;
+}
+
+.label-note-stat {
+    font-size: 10px;
+    margin-left: 55px;
+    display: block;
+}
+
+.icon-note-delete {
+    color: #ff5d5d;
+    position: relative;
+    bottom: -10px;
+    right: 0px;
+    float: right;
+    cursor: pointer;
+}
+
+.share-btn {
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    width: 30px;
+    border-radius: 5px;
+    float: left;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.share-facebook {
+    background-color: #449ade;
+}
+
+.share-email {
+    background-color: #9b65fb;
+}
+
+.share-google {
+    background-color: #fe5858;
+}
+
+.div-effort {
+    height: 23pc;
+    overflow: auto;
+}
+
+.table-effort {
+    width: 100%;
+}
+
+    .table-effort > tbody > tr > td {
+        border-top: 1px solid #f1f1f1;
+        border-bottom: 1px solid #f1f1f1;
+    }
+
+        .table-effort > tbody > tr > td > input {
+            border: 0;
+            padding: 10px;
+            width: 100%;
+            border-radius: 0px;
+        }
+
+.td-member {
+    text-align: left;
+    padding: 10px;
+    border-top: 0 !important;
+}
+
+.label-effortmember {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.td-effortdate {
+    text-align: center;
+    width: 15%;
+}
+
+.td-efforthour {
+    text-align: center;
+    width: 10%;
+    border-left: 1px solid #f1f1f1;
+    border-right: 1px solid #f1f1f1;
+}
+
+.td-totaleffort {
+    text-align: center;
+    width: 15%;
+    border-left: 1px solid #f1f1f1;
+    border-right: 1px solid #f1f1f1;
+}
+
+.td-effortmin {
+    text-align: center;
+    width: 10%;
+    border-left: 1px solid #f1f1f1;
+    border-right: 1px solid #f1f1f1;
+}
+
+.td-effortdesc {
+    text-align: center;
+    width: 55%;
+    border-left: 1px solid #f1f1f1;
+}
+
+.td-effortadd {
+    text-align: right !important;
+    width: 10%;
+    border-top: 0 !important;
+}
+
+    .td-effortadd > i {
+        font-size: 18px;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+
+.td-effortdel {
+    text-align: right !important;
+    width: 10%;
+}
+
+    .td-effortdel > i {
+        font-size: 18px;
+        vertical-align: middle;
+        cursor: pointer;
+        color: #ffa4a4;
+    }
+
+.touchpoint-info {
+    background-color: #eee;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 15px;
+    float: right;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.row-deleted {
+    background-color: #fff0f0;
+}
+
+    .row-deleted > td > input {
+        background-color: #fff0f0 !important;
+    }
+
+.note-container {
+    height: 15pc;
+    overflow: auto;
+    padding-right: 1pc;
+    margin-top: 1pc;
+}
+
+.img-note {
+    height: 35px;
+    float: left;
+}
+
+.table-document {
+    width: 100%;
+}
+
+    .table-document > thead > tr > td {
+        padding: 15px 5px;
+        font-weight: 600;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+    }
+
+    .table-document > tbody > tr > td {
+        padding: 15px 5px;
+        font-weight: 200;
+        text-align: left;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+        .table-document > tbody > tr > td > a {
+            font-weight: 400;
+        }
+
+    .table-document > tbody > tr:hover {
+        background-color: #f9f9f9;
+    }
+
+.tr-border {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.div-doc-list {
+    height: 22pc;
+    overflow: auto;
+}
+
+.img-google {
+    background-color: #ff5f5f;
+    text-align: center;
+    padding: 8px;
+    color: #ffffff;
+    border-radius: 40px;
+    width: 32px;
+}
+
+.img-file {
+    background-color: #719fa7;
+    text-align: center;
+    padding: 8px;
+    color: #ffffff;
+    border-radius: 40px;
+    width: 32px;
+}
+
+.img-dropbox {
+    background-color: #14b9d6;
+    text-align: center;
+    padding: 8px;
+    color: #ffffff;
+    border-radius: 40px;
+    width: 32px;
+}
+
+.img-onedrive {
+    background-color: #4489b7;
+    text-align: center;
+    padding: 8px;
+    color: #ffffff;
+    border-radius: 40px;
+    width: 32px;
+}
+
+.more-user {
+    background-color: #f5f5f5;
+    padding: 7px 10px;
+    border-radius: 30px;
+}
+
+.label-effortcost {
+    margin-left: 5px;
+}
