@@ -118,7 +118,7 @@ app.config(function ($routeProvider, $locationProvider) {
 
 		.when("/complianceReport", {
 			templateUrl: baseUrl + "/App/Views/complianceReport.html",
-			controller: "ComplianceCtrl",
+			controller: "complianceReport",
 			cache: false,
 			resolve: {
 				lazy: [
