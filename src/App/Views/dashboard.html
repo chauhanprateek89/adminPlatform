@@ -1,85 +1,98 @@
-<style>
- 
-</style>
-
 <div class="col-md-12">
-        <h1 class="page-title"> Dashboard > All alerts
-        </h1>
-        <div class="page-bar">
-            <ul class="page-breadcrumb">
-                <li>
-                    <i class="icon-info"></i>&nbsp; An overview of your alerts </li>
-            </ul>
-        </div>
+    <h1 class="page-title"> Dashboard > All alerts
+    </h1>
+    <div class="page-bar">
+        <ul class="page-breadcrumb">
+            <li>
+                <i class="icon-info"></i>&nbsp; An overview of your alerts </li>
+        </ul>
+    </div>
 </div>
 
-<div id="p1" class="container col-md-10">
-        <div class="">
-    
-            <ul class="nav nav-tabs nav-justified">
-                <li class="active">
-                    <a data-toggle="tab" ng-click="activeTab = 'tab1'">Alarms</a>
-                </li>
-                <li class="">
-                    <a class=" " data-toggle="tab" ng-click="activeTab = 'tab2'">Sensors</a>
-                </li>
-               
-            </ul>
-    
-            <div class="tab-content" style="height:400px">
-                
-                <div id="home" class="tab-pane fade {{activeTab == 'tab1' ? 'in active' : ''}}">
+<div class="container col-md-10">
+    <div class="">
 
-                    <div class="container " >
-                       <ul class="nav nav-pills">
-                           <li class="active">
-                               <a data-toggle="tab" ng-click="activePill = 'pill1'">All alerts</a>
-                           </li>
-                           <li class="">
-                               <a data-toggle="tab" ng-click="activePill = 'pill2'">Historical alerts</a>
-                           </li>
-                       </ul> 
+        <ul class="nav nav-tabs nav-justified">
+            <li class="active">
+                <a data-toggle="tab" ng-click="activeTab = 'tab1'">Alarms</a>
+            </li>
+            <li class="">
+                <a class=" " data-toggle="tab" ng-click="activeTab = 'tab2'">Sensors</a>
+            </li>
 
-                       <div class="tab-content">
-                            <div id="home2" class="tab-pane fade {{activePill == 'pill1' ? 'in active' : ''}}">
-                                <p>SOme data</p>
+        </ul>
+
+        <div class="tab-content" style="height:400px">
+
+            <div id="home" class="tab-pane fade {{activeTab == 'tab1' ? 'in active' : ''}}">
+
+                <div class="container  ">
+                    <ul class="nav nav-pills">
+                        <li class="active">
+                            <a data-toggle="tab" ng-click="activePill = 'pill1'">All alerts</a>
+                        </li>
+                        <li class="">
+                            <a data-toggle="tab" ng-click="activePill = 'pill2'">Historical alerts</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content container">
+                        <div id="home2" class="tab-pane row col-md-12 fade {{activePill == 'pill1' ? 'in active' : ''}}">
+                            <div class="col-md-5 " id="p1" ng-controller="dashboardCtrl as dash">
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">Alarms in the last 24 hours</div>
+                                    <div class="panel-body pre-scrollable">
+
+                                        <div ng-repeat="product in dash.product">
+                                            <h2 ng-click="test(product.name)">{{product.name}}</h2>
+                                            <p>{{product.time}} - {{product.description}}</p>
+                                            <!-- <p></p> -->
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-                       </div>
-                       
-                       <div class="tab-content">
-                            <div id="menu2" class="tab-pane fade {{activePill == 'pill2' ? 'in active' : ''}}">
-                                <p>SOme other data</p>
+                            <div class="col-md-5 col-md-offset-1" id="p1">
+                                <p>Sample text1</p>
                             </div>
-                       </div>
-
+                        </div>
                     </div>
-                    </div>
 
-                <div id="menu1" class="tab-pane fade {{activeTab == 'tab2' ? 'in active' : ''}}">
-                    <h3>Menu 1</h3>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <div class="col-md-12">
-                        <form action="">
-                            <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-                            </div>
-                            <div class="form-group">
-                                <label for="pwd">Password:</label>
-                                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="remember"> Remember me</label>
-                            </div>
-                            <button type="submit" class="btn btn-default">Submit</button>
-                        </form>
+                    <div class="tab-content">
+                        <div id="menu2" class="tab-pane fade {{activePill == 'pill2' ? 'in active' : ''}}">
+                            <p>SOme other data</p>
+                        </div>
                     </div>
-                </div>
 
                 </div>
+            </div>
+
+            <div id="menu1" class="tab-pane fade {{activeTab == 'tab2' ? 'in active' : ''}}">
+                <h3>Menu 1</h3>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="col-md-12">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="remember"> Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div>
+            </div>
+
         </div>
     </div>
+</div>    
     <script>
         $('.page-sidebar-menu').find('a[href="#!dashboard"]').closest('li').addClass('active');
     </script>

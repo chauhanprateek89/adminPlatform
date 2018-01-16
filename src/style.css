@@ -1,6 +1,17 @@
+
+/* Custom CSS crated by Harsh*/
+
+
 #p1 {
-    border: 12px solid #B22222;
-    border-radius: 10px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    border: 1px solid #B22222;
+    border-radius: 1px;
+    margin-top: 1px;
+    margin-bottom: 1px;
     }
+
+    /* div {
+        border: 1px solid #B22222;
+        border-radius: 1px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+        } */
