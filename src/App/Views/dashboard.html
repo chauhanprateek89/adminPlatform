@@ -1,0 +1,161 @@
+
+
+ <div class="col-md-12">
+        <h1 class="page-title"> Dashboard > All alerts
+        </h1>
+        <div class="page-bar">
+            <ul class="page-breadcrumb">
+                <li>
+                    <i class="icon-info"></i>&nbsp; An overview of your alerts </li>
+            </ul>
+        </div>
+    </div>
+
+<!--
+<div class="tabbable boxed parentTabs col-md-8 col-md-offset-2" style="margin: 0 auto">
+        <ul class="nav nav-tabs nav-justified">
+            <li class="active"><a  data-target="#home" >Alerts</a>
+            </li>
+            <li><a data-target="#set2">Sensor Lists</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade active in" id="home">
+                <div class="tabbable">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-target="#sub11">All Alerts</a>
+                        </li>
+                        <li><a data-target="#sub12">Historical Alerts</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content border">
+                        <div class="tab-pane fade active in" id="sub11">
+                                <div class="container">
+                                        <h2>Basic Panel</h2>
+                                        <div class="panel panel-default">
+                                          <div class="panel-body" item-width="100">A Basic Panel</div>
+                                        </div>
+                                      </div>
+                        </div>
+                        <div class="tab-pane fade" id="sub12">
+                            <p>Tab 1.2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="set2">
+                <div class="tabbable">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-target="#sub21">Tab 2.1</a>
+                        </li>
+                        <li><a href="#sub22">Tab 2.2</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade active in" id="sub21">
+                            <p>Tab 2.1</p>
+                        </div>
+                        <div class="tab-pane fade" id="sub22">
+                            <p>Tab 2.2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container">
+            <div class="col-md-10 md-offset-2" style="margin-left:30px">
+                <ul class="nav nav-tabs nav-justified " ng-init src="'tabname = tabl1'">
+                    <li class="active">
+                        <a data-toggle="tab" data-target="#alerts"  ng-click="tabname = tabAlerts">Alerts</a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" data-target="#sensors"  ng-click="tabname = tablSensors">Sensors List</a>
+                    </li>
+
+                </ul>
+        
+                <div class="tab-content">
+                    <div id="alerts" class="tab-pane fade" ng-show="tabname == alerts">                      
+
+                            <div class="row">
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a data-toggle="tab" data-target="#allAlerts" ng-click="tabname = tabAlerts">All Alerts</a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="tab" data-target="#historic" ng-click="tabname = tabSensors">Historical Alerts</a>
+                                    </li>
+                            
+                                </ul>
+                            
+                                <div class="tab-content">
+                                    <div id="allAlerts" class="tab-pane fade" ng-show="tabname == all">
+                            
+                                        <div class="container">
+                                            <div class="panel panel-default">
+                            
+                                                <div class="panel-heading">Panel Heading</div>
+                            
+                                                <div class="panel-body">Panel Content</div>
+                            
+                                                <div class="panel-footer">Panel Footer</div>
+                            
+                                            </div>
+                                        </div>
+                            
+                                    </div>
+                                    <!-- <div id="historic" class="tab-pane fade" ng-show="tabname == historic">
+                                                                            <h3>Sensors List</h3>
+                                                                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                                        </div> -->
+                                </div>
+                            </div>
+                        
+                    </div>
+
+                    </div>
+                    <div id="sensors" class="tab-pane fade" ng-show="tabname == sensors">
+                        
+                        <div class="row">
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a data-toggle="tab" data-target="#area1" ng-click="tabname = area1">Area 1</a>
+                                </li>
+                                <li>
+                                    <a data-toggle="tab" data-target="#area2" ng-click="tabname = area2">Area 2</a>
+                                </li>
+                        
+                            </ul>
+                        
+                            <div class="tab-content">
+                                <div id="area1" class="tab-pane fade" ng-show="tabname == area1">
+                                        <p>THis is area2</p>
+                                </div>                        
+
+                                    <div id="area2" class="tab-pane fade" ng-show="tabname == area2">
+                                        <p>THis is area2</p>
+                                </div>
+                                <!-- <div id="historic" class="tab-pane fade" ng-show="tabname == historic">
+                                                                        <h3>Sensors List</h3>
+                                                                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                                    </div> -->
+                        </div>
+                    
+                    
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+<!-- 
+    <ul class="nav nav-tabs" ng-controller="testCtrl">
+      <li ng-class="tabClass(tab)" ng-repeat="tab in tabs" tab="tab"><a href="{{tab.link}}" ng-click="setSelectedTab(tab)">{{tab.label}}</a></li>
+    </ul>
+    <div ng-view></div> -->
+  
