@@ -25,12 +25,11 @@
 			} ];
 			GeneratePieChart($scope, 'div_piechart');
 
-
 			$scope.xAxis_Data = ['Jan', 'Feb', 'Mar', 'Apr', 'May'];
 			$scope.bar_Data = [10, 15, 25, 20, 15];
 
 			GenerateBarChart($scope, 'div_barchart');
-			GenerateBarChart($scope, 'div_barchart2');
+			// GenerateBarChart($scope, 'div_barchart3');
 			GenerateLineChart($scope, 'div_linechart');
 		});
 

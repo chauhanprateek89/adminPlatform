@@ -4,5 +4,5 @@
 
 	angular.module('cognitionApp').controller('complianceReport',
 		function ($scope) {
-		});
+		});	
 })();
