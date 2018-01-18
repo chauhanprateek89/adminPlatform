@@ -12,6 +12,7 @@
 			$scope.test = function(text) {
 				alert(text);
 			  } 
+			 
 		
 			this.product = alerts_data;
 

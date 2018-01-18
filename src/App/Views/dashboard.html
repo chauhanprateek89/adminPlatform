@@ -6,6 +6,7 @@
             <li>
                 <i class="icon-info"></i>&nbsp; An overview of your alerts </li>
         </ul>
+        
     </div>
 </div>
 
@@ -22,7 +23,7 @@
 
         </ul>
 
-        <div class="tab-content" style="padding-bottom:30px">
+        <div class="tab-content" style="padding-bottom:30px" id="test">
 
             <div id="home" class="tab-pane fade {{activeTab == 'tab1' ? 'in active' : ''}}">
 
@@ -34,10 +35,11 @@
                         <li class="">
                             <a data-toggle="tab" ng-click="activePill = 'pill2'">Historical alerts</a>
                         </li>
+
                     </ul>
 
-                    <div class="tab-content container">
-                        <div id="home2" class="tab-pane row col-md-12 fade {{activePill == 'pill1' ? 'in active' : ''}}">
+                    <div class="tab-content container col-md-12"  >
+                        <div id="home2" class="tab-pane row  fade {{activePill == 'pill1' ? 'in active' : ''}}">
                             <div class="col-md-5 "  ng-controller="dashboardCtrl as dash">
 
                                 <div class="panel panel-default">
@@ -45,8 +47,12 @@
                                     <div class="panel-body pre-scrollable">
 
                                         <div ng-repeat="product in dash.product">
-                                            <h2 ng-click="test(product.name)">{{product.name}}</h2>
+                                            <h2 ng-click="test(product.name |)">{{product.name}}</h2>
                                             <p>{{product.time}} - {{product.description}}</p>
+                                            <p>time stamp</p>
+                                            {{ '1516202722000' | date:'MM/dd/yyyy @ h:mma' }}
+                                            {{ '1461938400' | date:'MM/dd/yyyy @ h:mma' }}
+
                                             <hr>
                                             <!-- <p></p> -->
                                         </div>
@@ -54,7 +60,7 @@
                                 </div>
 
                             </div>
-                            <div class="col-md-5 col-md-offset-1" id="p1">
+                            <div class="col-md-5 " id="p1">
                                 <!-- <p>Sample text1</p> -->
 
                                 <div  id="div_piechart3" style="width: 100%; height: 24pc;"></div>

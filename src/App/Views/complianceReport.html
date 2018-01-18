@@ -1,13 +1,12 @@
-
 <div class="col-md-12">
-    <h1 class="page-title"> Compliance Reporting
-    </h1>
-    <div class="page-bar">
-        <ul class="page-breadcrumb">
-            <li>
-                <i class="icon-info"></i>&nbsp; Manage your reports </li>
-        </ul>
-    </div>
+	<h1 class="page-title"> Compliance Reporting
+	</h1>
+	<div class="page-bar">
+		<ul class="page-breadcrumb">
+			<li>
+				<i class="icon-info"></i>&nbsp; Manage your reports </li>
+		</ul>
+	</div>
 </div>
 
 <div class="col-md-12 ">
@@ -18,34 +17,38 @@
 			<div class="portlet box blue">
 				<div class="portlet-title">
 					<div class="caption">
-						Create a report 
-					</div>  <i class="icon-pencil"></i>
+						Create a report
+					</div>
+					<i class="icon-pencil icon-pull-right"></i>
 				</div>
-				<div class="portlet-body">
-						<div>
-                            <p style="color:black">Click to generate a new origin green complaince report </p>
-                        </div>
-                        <div>
-                            <input type="text" placeholder="File name">
-                        </div>
-                        <div>
-                            <button>Next</button>
-                        </div>
-				</div>
-			</div>
-		</div>
-		
-		<!-- <br> -->
-		<div class="col-md-6">
-			<div class="portlet box blue">
-				<div class="portlet-title">
-					<div class="caption">
-						View/edit saved reports </div> <i class="fa fa-file-o"></i>
-				</div> 
-				<div class="portlet-body">
-					<div id="div_barchart" style="width: 100%; height: 20pc;"></div>
+				<div class="portlet-body" ng-controller="complianceCtrl">
+					<div class="table-responsive">
+						<table class="table table-bordered table-hover table-striped">
+							<div>
+								<p style="color:black">Click to generate a new origin green complaince report </p>
+
+								<input type="text" placeholder="File name" class="form-control">
+							</div>
+					</div>
+					<button type="button" class="btn btn-primary pull-right" style="width:100px; margin: 10px" ng-click="testMe()">Next</button>
+					</table>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<!-- <br> -->
+	<div class="col-md-6">
+		<div class="portlet box blue">
+			<div class="portlet-title">
+				<div class="caption">
+					View/edit saved reports </div>
+				<i class="fa fa-file-o  icon-pull-right"></i>
+			</div>
+			<div class="portlet-body">
+				<div id="div_barchart" style="width: 100%; height: 20pc;"></div>
+			</div>
+		</div>
+	</div>
+</div>
 </div>

@@ -116,9 +116,9 @@ app.config(function ($routeProvider, $locationProvider) {
 			}
 		})
 
-		.when("/complianceReport", {
+		.when("/complianceCtrl", {
 			templateUrl: baseUrl + "/App/Views/complianceReport.html",
-			controller: "complianceReport",
+			controller: "complianceCtrl",
 			cache: false,
 			resolve: {
 				lazy: [
@@ -128,7 +128,7 @@ app.config(function ($routeProvider, $locationProvider) {
 							.load([{
 								name: 'cognitionApp',
 								serie: true,
-								files: ['App/Controllers/Common/complianceReport.js']
+								files: ['App/Controllers/complianceCtrl.js']
 							}]);
 					}]
 			}
