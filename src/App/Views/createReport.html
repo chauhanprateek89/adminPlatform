@@ -4,30 +4,37 @@
 </head> -->
 
 <div class="col-md-12">
-        <h1 class="page-title"> Compliance Reporting
-        </h1>
-        <div class="page-bar">
-            <ul class="page-breadcrumb">
-                <li>
-                    <i class="icon-info"></i>&nbsp; Create a new Complaiance Report</li>
-            </ul>
-        </div>
+    <h1 class="page-title"> Compliance Reporting
+    </h1>
+    <div class="page-bar">
+        <ul class="page-breadcrumb">
+            <li>
+                <i class="icon-info"></i>&nbsp; Create a new Complaiance Report</li>
+        </ul>
     </div>
+</div>
 
-    
-<h3>Coming soon</h3>
-<form action="">
+<div class="table table-responsive">
+    <table class="table">
+        <tr>
+            <td>
+            <form action="">
                 <div class="form-group" ng-controller="createReportCtrl">
-                    <label for="name"><h1>Title: {{abc}}</h1></label>
-                    <input type="text" ng-model="abc" class="form-control" style="width:60%"id="name" 
-                    placeholder="Enter Compliance Report title" name="name">
+                    <label for="name">
+                        <h1>Title: {{abc}}</h1>
+                    </label>
+                    <input type="text" ng-model="abc" class="form-control" style="width:60%" id="name" placeholder="Enter Compliance Report title"
+                        name="name">
                 </div>
                 <button type="submit" class="btn btn-warning">Submit</button>
-            </form>
-
-<a href="#!complianceCtrl">
-<button class="btn btn-info" id="back_btn" ng-click="">
-        <span class="glyphicon glyphicon-triangle-left"></span>back</button>
-
-        
-</a>
+            </form></td>
+        </tr>
+        <tr>
+            <td>
+            <a href="#!complianceCtrl">
+                <button class="btn btn-info" id="back_btn" ng-click="">
+                    <span class="glyphicon glyphicon-triangle-left"></span>back</button>
+            </a></td>
+        </tr>
+    </table>
+</div>
