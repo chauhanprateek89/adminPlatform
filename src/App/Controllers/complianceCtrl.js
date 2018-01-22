@@ -6,7 +6,7 @@
 		
 			angular.module('cognitionApp').controller('complianceCtrl',
 				function ($scope) {	
-					$scope.testMe = function(){
+					$scope.createReport = function(){
 				alert("Test");
 			}
 				});

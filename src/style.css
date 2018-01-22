@@ -24,3 +24,39 @@
         border-color: #dde6e9;
         text-shadow: 0 0 black;
     }
+
+    td img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #back_btn {
+        bottom: 3%;
+    position: absolute;
+    margin-left: 10px;
+    }
+
+    #ratio_img{
+        display: block;
+  max-width:230px;
+  max-height:95px;
+  width: auto;
+  height: auto;
+  
+    }
+
+    #portlet{
+        height: 410px;
+    }
+
+    #portlet-body{
+        height: 350px;
+    width: 90%;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    width: 95%;
+    /* border: 3px solid green; */
+    padding: 10px;
+    }

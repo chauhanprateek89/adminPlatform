@@ -14,23 +14,31 @@
 	<div class="row">
 
 		<div class="col-md-6">
-			<div class="portlet box blue">
+			<div class="portlet box blue" id="portlet">
 				<div class="portlet-title">
 					<div class="caption">
 						Create a report
 					</div>
 					<i class="icon-pencil icon-pull-right"></i>
 				</div>
-				<div class="portlet-body" ng-controller="complianceCtrl">
-					<div class="table-responsive">
-						<table class="table table-bordered table-hover table-striped">
+				<div class="portlet-body" id="portlet-body">
+					<div class="table">
+						<table class="table">
+							<tbody>
+							<tr>
 							<div>
-								<p style="color:black">Click to generate a new origin green complaince report </p>
-
-								<input type="text" placeholder="File name" class="form-control">
-							</div>
+								<td ><h2>Click to generate a new origin green complaince report </h2></td>
+							</tr>
+							<td style="padding:20px" class="">
+								<!-- <input type="text" placeholder="File name" class="form-control"> -->
+								<a href ="#!createReport">
+								<img class="img-responsive" id="ratio_img" src="\Images\create_file.png" style="margin-top: 15px;">
+							</a>
+							</td>
+						</tbody>
 					</div>
-					<button type="button" class="btn btn-primary pull-right" style="width:100px; margin: 10px" ng-click="testMe()">Next</button>
+					</div>
+					<!-- <button type="button" class="btn btn-primary pull-right" style="width:100px; margin: 10px" ng-click="testMe()">Next</button> -->
 					</table>
 				</div>
 			</div>
@@ -39,14 +47,29 @@
 
 	<!-- <br> -->
 	<div class="col-md-6">
-		<div class="portlet box blue">
+		<div class="portlet box blue" id="portlet">
 			<div class="portlet-title">
 				<div class="caption">
 					View/edit saved reports </div>
 				<i class="fa fa-file-o  icon-pull-right"></i>
 			</div>
-			<div class="portlet-body">
-				<div id="div_barchart" style="width: 100%; height: 20pc;"></div>
+			<div class="portlet-body" id="portlet-body">
+				<!-- <h2>You have no saved reports</h2> -->
+				<div class="table">
+						<table class="table">
+							<tbody>
+							<tr>
+							<div>
+								<td ><h2>You have no saved reports </h2></td>
+							</tr>
+							<td style="padding:20px" class="">
+								<!-- <input type="text" placeholder="File name" class="form-control">
+								<a href ="#!createReport">
+								<img class="img-responsive" id="ratio_img" src="\Images\create_file.png" style="margin-top: 15px;">
+							</a> -->
+							</td>
+						</tbody>
+					</div>
 			</div>
 		</div>
 	</div>

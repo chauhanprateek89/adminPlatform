@@ -134,6 +134,24 @@ app.config(function ($routeProvider, $locationProvider) {
 			}
 		})
 
+		.when("/createReport", {
+			templateUrl: baseUrl + "/App/Views/createReport.html",
+			controller: "createReportCtrl",
+			cache: false,
+			resolve: {
+				lazy: [
+					'$ocLazyLoad',
+					function ($ocLazyLoad) {
+						return $ocLazyLoad
+							.load([{
+								name: 'cognitionApp',
+								serie: true,
+								files: ['App/Controllers/createReportCtrl.js']
+							}]);
+					}]
+			}
+		})
+
 		.otherwise("/", {
 			templateUrl: baseUrl + "/App/Views/home.html",
 			controller: "homeCtrl",
