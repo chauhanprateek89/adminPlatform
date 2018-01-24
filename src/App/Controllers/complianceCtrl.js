@@ -6,7 +6,8 @@
 		
 			angular.module('cognitionApp').controller('complianceCtrl',
 				function ($scope) {	
-					$scope.test ="";
+					$scope.timeSpan ="";
+					$scope.myDate ="";
 					$scope.createReport = function(){
 				alert("Test");
 			}
