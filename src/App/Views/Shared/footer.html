@@ -4,3 +4,10 @@
         <i class="icon-arrow-up"></i>
     </div>
 </div>
+<script>
+        $(window).on('resize', function(){
+            if(chart != null && chart != undefined){
+                chart.resize();
+            }
+        });
+    </script>

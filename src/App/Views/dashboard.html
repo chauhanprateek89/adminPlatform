@@ -6,7 +6,7 @@
             <li>
                 <i class="icon-info"></i>&nbsp; An overview of your alerts </li>
         </ul>
-        
+
     </div>
 </div>
 
@@ -27,7 +27,7 @@
 
             <div id="home" class="tab-pane fade {{activeTab == 'tab1' ? 'in active' : ''}}">
 
-                <div class="container  ">
+                <div class="container col-md-12">
                     <ul class="nav nav-pills">
                         <li class="active">
                             <a data-toggle="tab" ng-click="activePill = 'pill1'">All alerts</a>
@@ -38,20 +38,19 @@
 
                     </ul>
 
-                    <div class="tab-content container col-md-12"  >
+                    <div class="tab-content container col-md-12">
                         <div id="home2" class="tab-pane row  fade {{activePill == 'pill1' ? 'in active' : ''}}">
-                            <div class="col-md-5 "  ng-controller="dashboardCtrl as dash">
+                            <div class="col-md-5 " ng-controller="dashboardCtrl as dash">
 
                                 <div class="panel panel-default">
                                     <div class="panel-heading">Alarms in the last 24 hours</div>
                                     <div class="panel-body pre-scrollable">
 
                                         <div ng-repeat="product in dash.product">
-                                            <h2 ng-click="test(product.name |)">{{product.name}}</h2>
+                                            <h2 ng-click="test(product.name)">{{product.name}}</h2>
                                             <p>{{product.time}} - {{product.description}}</p>
                                             <p>time stamp</p>
-                                            {{ '1516202722000' | date:'MM/dd/yyyy @ h:mma' }}
-                                            {{ '1461938400' | date:'MM/dd/yyyy @ h:mma' }}
+                                            {{ '1516202722000' | date:'MM/dd/yyyy @ h:mma' }} {{ '1461938400' | date:'MM/dd/yyyy @ h:mma' }}
 
                                             <hr>
                                             <!-- <p></p> -->
@@ -62,11 +61,7 @@
                             </div>
                             <div class="col-md-5 " id="p1">
                                 <!-- <p>Sample text1</p> -->
-
-                                <div  id="div_piechart3" style="width: 100%; height: 24pc;"></div>
-
-
-
+                                <div id="div_piechart3" style="width: 100%; height: 24pc;"></div>
                             </div>
                         </div>
                     </div>
@@ -80,31 +75,21 @@
                 </div>
             </div>
 
-            <div id="menu1" class="tab-pane fade {{activeTab == 'tab2' ? 'in active' : ''}}">
-                <!-- <h3>Menu 1</h3>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> -->
-                <div class="col-md-12">
-                    <!-- <form action="">
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="pwd">Password:</label>
-                            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" name="remember"> Remember me</label>
-                        </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
-                    </form> -->
+            <div id="menu1" class="tab-pane fade {{activeTab == 'tab2' ? 'in active' : ''}} col-md-12 " style="">
+                <div style=" width:100%; margin: 0 auto; display: inline-block; text-align:center">
+
+                    <!-- Write code here -->
+                    <div class="pull-left">
+                        <select class="form-control" ng-options="area for area in areas" ng-model="selectedArea">
+                        </select>
+                    </div>
+                    <p>{{selectedArea | json}}</p>                        
                 </div>
             </div>
 
         </div>
     </div>
-</div>    
-    <script>
-        $('.page-sidebar-menu').find('a[href="#!dashboard"]').closest('li').addClass('active');
-    </script>
+</div>
+<script>
+    $('.page-sidebar-menu').find('a[href="#!dashboard"]').closest('li').addClass('active');
+</script>

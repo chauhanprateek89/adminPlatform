@@ -9,10 +9,13 @@
 			
 			$scope.activeTab = 'tab1';
 			$scope.activePill = 'pill1';
+			// $scope.activePill = 'pill-1';
 			$scope.test = function(text) {
 				alert(text);
 			  } 
-			 
+
+			  $scope.areas = ['Area1','Area2','Area3'];
+			  $scope.selectedArea = "Area1";
 		
 			this.product = alerts_data;
 
@@ -36,6 +39,10 @@
 			} ];
 
 			GeneratePieChart($scope, 'div_piechart3');
+			// GenerateGaugeChart($scope, 'one');
+
+
+			
 		
 		});
 

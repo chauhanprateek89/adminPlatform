@@ -92,7 +92,7 @@ app.config(function ($routeProvider, $locationProvider) {
 							.load([{
 								name: 'cognitionApp',
 								serie: true,
-								files: ['App/Controllers/Common/demo.js']
+								files: ['App/Controllers/demo.js']
 							}]);
 					}]
 			}
