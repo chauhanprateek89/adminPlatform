@@ -13,6 +13,17 @@
 			$scope.test = function(text) {
 				alert(text);
 			  } 
+			  
+			  $scope.restoreCanvas = function (e) {
+
+				// var canvas = document.getElementsByTagName("canvas");
+				// for (var js_i in canvas) {
+				// 	if (canvas[js_i].style != undefined) {
+				// 	canvas[js_i].style.width = '100%';
+				// 	canvas[js_i].parentElement.style.width = '100%'	;
+				// 	}
+				// }
+			  };
 
 			  $scope.areas = ['Area1','Area2','Area3'];
 			  $scope.selectedArea = "Area1";
@@ -40,6 +51,7 @@
 
 			GeneratePieChart($scope, 'div_piechart3');
 			// GenerateGaugeChart($scope, 'one');
+			GenerateLineChart($scope, 'div_barchart3');
 
 
 			

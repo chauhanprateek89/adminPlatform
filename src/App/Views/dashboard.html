@@ -14,10 +14,10 @@
     <div class="">
 
         <ul class="nav nav-tabs nav-justified">
-            <li class="active">
+            <li class="active" ng-click="restoreCanvas()">
                 <a data-toggle="tab" ng-click="activeTab = 'tab1'">Alarms</a>
             </li>
-            <li class="">
+            <li class="" ng-click="restoreCanvas()">
                 <a class=" " data-toggle="tab" ng-click="activeTab = 'tab2'">Sensors</a>
             </li>
 
@@ -29,10 +29,10 @@
 
                 <div class="container col-md-12">
                     <ul class="nav nav-pills">
-                        <li class="active">
+                        <li class="active" >
                             <a data-toggle="tab" ng-click="activePill = 'pill1'">All alerts</a>
                         </li>
-                        <li class="">
+                        <li class="" >
                             <a data-toggle="tab" ng-click="activePill = 'pill2'">Historical alerts</a>
                         </li>
 
@@ -40,20 +40,21 @@
 
                     <div class="tab-content container col-md-12">
                         <div id="home2" class="tab-pane row  fade {{activePill == 'pill1' ? 'in active' : ''}}">
-                            <div class="col-md-5 " ng-controller="dashboardCtrl as dash">
+                            <div class="col-md-7 " ng-controller="dashboardCtrl as dash">
 
                                 <div class="panel panel-default">
                                     <div class="panel-heading">Alarms in the last 24 hours</div>
                                     <div class="panel-body pre-scrollable">
 
-                                        <div ng-repeat="product in dash.product">
-                                            <h2 ng-click="test(product.name)">{{product.name}}</h2>
+                                        <div ng-repeat="product in dash.product" class="alert alert-danger alert-dismissable">
+                                            <h2 style="cursor:pointer" ng-click="test(product.name)">{{product.name}}</h2>
                                             <p>{{product.time}} - {{product.description}}</p>
                                             <p>time stamp</p>
                                             {{ '1516202722000' | date:'MM/dd/yyyy @ h:mma' }} {{ '1461938400' | date:'MM/dd/yyyy @ h:mma' }}
-
-                                            <hr>
+                                            <!-- <a  class="close" data-dismiss="alert" aria-label="close">×</a> -->
+                                            <!-- <hr> -->
                                             <!-- <p></p> -->
+
                                         </div>
                                     </div>
                                 </div>
@@ -61,7 +62,7 @@
                             </div>
                             <div class="col-md-5 " id="p1">
                                 <!-- <p>Sample text1</p> -->
-                                <div id="div_piechart3" style="width: 100%; height: 24pc;"></div>
+                                <!-- <div id="div_piechart3" style="width: 100%; height: 24pc;"></div> -->
                             </div>
                         </div>
                     </div>
@@ -76,19 +77,49 @@
             </div>
 
             <div id="menu1" class="tab-pane fade {{activeTab == 'tab2' ? 'in active' : ''}} col-md-12 " style="">
-                <div style=" width:100%; margin: 0 auto; display: inline-block; text-align:center">
-
-                    <!-- Write code here -->
-                    <div class="pull-left">
-                        <select class="form-control" ng-options="area for area in areas" ng-model="selectedArea">
-                        </select>
-                    </div>
-                    <p>{{selectedArea | json}}</p>                        
+                <!-- Write code here -->
+                <div class="pull-left">
+                    <select class="form-control" ng-options="area for area in areas" ng-model="selectedArea">
+                    </select>
                 </div>
+                <!-- <p style="width:100%; margin: 0 auto; display: inline-block; text-align:center">{{}}</p> -->
+                <!-- <div id="div_linechart2"  style="width:100%; height: 20pc;  " class="col-md-12">                        
+               </div> -->
+                <!-- <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div id="div_linechart3" style="width:100%; height: 20pc;  " class="col-md-12">
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="col-md-12" style="margin-top: 1pc">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="portlet box blue">
+                                    <div class="portlet-title">
+                                        <div class="caption">
+                                            {{selectedArea | json}} </div>
+                                        <i class="fa fa-tachometer icon-pull-right"></i>
+                                            
+                                    </div>
+                                    <!-- <div class="portlet-body">
+                                        <div id="div_barchart2" style="width: 100%; height: 20pc;"></div>
+                                    </div> -->
+                                            <div class="portlet-body">
+                                                <div id="div_barchart3" style="width: 100%; display: block; height: 20pc;"></div>
+                                            
+                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
 
         </div>
+
     </div>
+</div>
 </div>
 <script>
     $('.page-sidebar-menu').find('a[href="#!dashboard"]').closest('li').addClass('active');

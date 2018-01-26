@@ -5,6 +5,8 @@
 	angular.module('cognitionApp').controller('homeCtrl',
 		function ($scope, toastr, spinner) {
 			// debugger
+
+			//Data needed for piechart
 			$scope.series_name = 'Total Electricity Consumption';
 			$scope.legend_Data = [ 'JAN', 'FEB', 'MAR', 'APR', 'MAY' ];
 			$scope.pie_Data = [ {
@@ -16,7 +18,7 @@
 			}, {
 				value : 234,
 				name : 'MAR'
-			}, {
+			}, {			
 				value : 135,
 				name : 'APR'
 			}, {
@@ -24,7 +26,8 @@
 				name : 'MAY'
 			} ];
 			GeneratePieChart($scope, 'div_piechart');
-
+ 
+			//data needed for bar chaart
 			$scope.xAxis_Data = ['Jan', 'Feb', 'Mar', 'Apr', 'May'];
 			$scope.bar_Data = [10, 15, 25, 20, 15];
 
