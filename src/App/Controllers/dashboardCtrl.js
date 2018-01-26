@@ -25,6 +25,19 @@
 				// }
 			  };
 
+			  echarts.init(document.getElementById('main')).setOption({
+				series: {
+					type: 'pie',
+					data: [
+						{name: 'A', value: 1212},
+						{name: 'B', value: 2323},
+						{name: 'C', value: 1919}
+					]
+				}
+			});
+
+			
+
 			  $scope.areas = ['Area1','Area2','Area3'];
 			  $scope.selectedArea = "Area1";
 		
@@ -51,7 +64,8 @@
 
 			GeneratePieChart($scope, 'div_piechart3');
 			// GenerateGaugeChart($scope, 'one');
-			GenerateLineChart($scope, 'div_barchart3');
+			// GenerateLineChart($scope, 'div_barchart3');
+			GenerateGaugeChart($scope, 'div_barchart3');
 
 
 			

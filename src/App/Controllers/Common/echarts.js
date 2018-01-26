@@ -310,3 +310,7 @@ function GenerateLineChart($scope, div_id) {
 		}, 1000);
 	}, 500);
 }
+
+function GenerateGaugeChart($scope, div_id) {
+	return null;
+}
