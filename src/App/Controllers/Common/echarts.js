@@ -3,7 +3,7 @@ function GenerateBarChart($scope, div_id) {
 		var dom = document.getElementById(div_id);
 		var myChart = echarts.init(dom);
 
-		option = {
+		var option = {
 			color: ['#3398DB'],
 			title: {
 				fontSize: 4
@@ -193,7 +193,7 @@ function GeneratePieChart($scope, div_id) {
 		var dom = document.getElementById(div_id);
 		var myChart = echarts.init(dom);
 
-		option = {
+		var option = {
 			tooltip: {
 				trigger: 'item',
 				formatter: "{a} <br/>{b} : {c} ({d}%)"
@@ -228,7 +228,6 @@ function GeneratePieChart($scope, div_id) {
 }
 
 function GenerateLineChart($scope, div_id) {
-
 	setTimeout(function () {
 		var dom = document.getElementById(div_id);
 		var myChart = echarts.init(dom);
@@ -255,7 +254,7 @@ function GenerateLineChart($scope, div_id) {
 			data.push(randomData());
 		}
 
-		option = {
+		var option = {
 			title: {
 				text: 'My Line Chart'
 			},
@@ -303,7 +302,7 @@ function GenerateLineChart($scope, div_id) {
 				data.shift();
 				data.push(randomData());
 			}
-		
+
 			if (option && typeof option === "object") {
 				myChart.setOption(option, true);
 			}
@@ -312,5 +311,36 @@ function GenerateLineChart($scope, div_id) {
 }
 
 function GenerateGaugeChart($scope, div_id) {
-	return null;
+	setTimeout(function () {
+		var dom = document.getElementById(div_id);
+		var myChart = echarts.init(dom);
+
+		var option = {
+			tooltip: {
+				formatter: "{a} <br/>{b} : {c}%"
+			},
+			toolbox: {
+				feature: {
+					restore: {},
+					saveAsImage: {}
+				}
+			},
+			series: [
+				{
+					name: 'Heat',
+					type: 'gauge',
+					detail: { formatter: '{value}%' },
+					data: [{ value: 50, name: 'Gauge Data' }]
+				}
+			]
+		};
+
+		//setInterval(function () {
+			//option.series[0].data[0].value = (Math.random() * 100).toFixed(2) - 0;
+			option.series[0].data[0].value = $scope.value;
+			if (option && typeof option === "object") {
+				myChart.setOption(option, true);
+			}
+		//}, 2000);		
+	}, 500);
 }

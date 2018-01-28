@@ -32,9 +32,9 @@
 			$scope.bar_Data = [10, 15, 25, 20, 15];
 
 			GenerateBarChart($scope, 'div_barchart');
-			// GenerateBarChart($scope, 'div_barchart3');
 			GenerateLineChart($scope, 'div_linechart');
-		});
 
-		
+			$scope.value = 70;
+			GenerateGaugeChart($scope, 'div_gauge');
+		});		
 })();
