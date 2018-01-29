@@ -21,8 +21,10 @@
 				// 	});
 			}
 
+
+
 			//Function created by Karan
-			$scope.CallApiGenerateGraph = function () {
+			$scope.CallApiGenerateBarGraph = function () {
 				//1) Do API Calling
 				//2) You will get following data in response:
 
@@ -35,12 +37,13 @@
 					.then(function mySuccess(response) {
 						console.log("success", response);
 						// console.log("test", test);
-						
+
 						// $scope.myResponse = response;
 
 						var responseData = response;
+						console.log("success", response.data);						
 
-						$scope.xAxis_Data = []; 
+						$scope.xAxis_Data = [];
 						$scope.bar_Data = [];
 						for (var k = 0; k < responseData.data.length; k++) {
 							$scope.xAxis_Data.push('Age ' + responseData.data[k].age);
@@ -74,7 +77,35 @@
 				// GenerateBarChart($scope, 'div_barchart');
 			}
 
-			$scope.CallApiGenerateGraph();
+			$scope.CallApiGenerateLineGraph = function () {
+				var xhr = new XMLHttpRequest();
+				xhr.open('GET', 'https://bngfv3vyf5.execute-api.eu-west-1.amazonaws.com/dev/breBak/all');
+				xhr.onreadystatechange = function (event) {
+					console.log(event.target.response);
+
+					var responseDataLine = event.target.response;
+
+					$scope.xAxis_Data = [];
+					$scope.bar_Data = [];
+					for (var k = 0; k < responseDataLine.length; k++) {
+						$scope.xAxis_Data.push(responseDataLine[k].amphrs);
+						$scope.bar_Data.push(responseDataLine[k].deveui);
+						// $scope.timestamp.push(responseDataLine[k].timestamp);
+					}
+					GenerateLineChart($scope, 'div_demo_timeline');
+
+				}
+				xhr.setRequestHeader('Content-Type', 'application/json');
+				// POST - 
+				//xhr.send(JSON.stringify({age: 26, height: 71, income: 2100})); 
+				// DELETE - GET
+				xhr.send();
+			}
+
+			$scope.CallApiGenerateBarGraph();
+			$scope.CallApiGenerateLineGraph();
+
+
 		});
 })();
 

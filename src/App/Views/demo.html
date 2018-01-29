@@ -1,54 +1,58 @@
 <div class="col-md-12">
-        <h1 class="page-title"> Compliance Reporting
-        </h1>
-        <div class="page-bar">
-            <ul class="page-breadcrumb">
-                <li>
-                    <i class="icon-info"></i>&nbsp; Manage your reports </li>
-            </ul>
+    <h1 class="page-title"> Compliance Reporting
+    </h1>
+    <div class="page-bar">
+        <ul class="page-breadcrumb">
+            <li>
+                <i class="icon-info"></i>&nbsp; Manage your reports </li>
+        </ul>
+    </div>
+</div>
+
+<div class="col-md-12">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" ng-model="name" />
+                </div>
+                <div class="form-group" class="test">
+                    <label>Start Date</label>
+                    <input type="date" class="form-control" ng-model="startdate" />
+                </div>
+                <div class="form-group" class="test">
+                    <label>End Date</label>
+                    <input type="date" class="form-control" ng-model="enddate" />
+                </div>
+                <div>
+                    {{startdate}} to {{enddate}}
+                </div>
+                <div class="form-group">
+                    <label>Gender</label>
+                    <select class="form-control" ng-model="gender">
+                        <option value="1" selected="selected">Male</option>
+                        <option value="2">Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success" ng-click="CallApiGenerateGraph()">Submit to API</button>
+                </div>
+                <div class="alert alert-info">
+                    {{responseMsg}}
+                    <br> {{myResponse.data}}
+                </div>
+            </form>
         </div>
     </div>
-    
-    <div class="col-md-12">
-        <div class="row">
-            <div class="col-md-6">
-                <form>
-                    <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" class="form-control" ng-model="name" />
-                    </div>
-                    <div class="form-group" class="test">
-                        <label>Start Date</label>
-                        <input type="date" class="form-control" ng-model="startdate" />
-                    </div>
-                    <div class="form-group" class="test">
-                        <label>End Date</label>
-                        <input type="date" class="form-control" ng-model="enddate" />
-                    </div>
-                    <div>
-                        {{startdate}} to
-                    {{enddate}}
-                </div><div class="form-group">
-                        <label>Gender</label>
-                        <select class="form-control" ng-model="gender">
-                            <option value="1" selected="selected">Male</option>
-                            <option value="2">Female</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-success" ng-click="CallApiGenerateGraph()">Submit to API</button>
-                    </div>
-                    <div class="alert alert-info">
-                        {{responseMsg}}
-                        <br>
-                        {{myResponse.data}}
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>    
-    <div class="col-md-12">
-        <div id="div_barchart" style="width: 100%; height: 24pc;"></div>
-    </div>
-    <script src="App/Controllers/Common/echarts.js"></script>
-    <script src="Scripts/echarts.common.min.js"></script>
+</div>
+<div class="col-md-12">
+    <div id="div_barchart" style="width: 100%; height: 24pc;"></div>
+</div>
+<br>
+<br>
+<div class="col-md-12">
+    <div id="div_demo_timeline" style="width: 100%; height: 24pc;"></div>
+</div>
+<script src="App/Controllers/Common/echarts.js"></script>
+<script src="Scripts/echarts.common.min.js"></script>

@@ -1,0 +1,41 @@
+[{
+	"age": 26,
+	"height": 71,
+	"income": 2100
+}, {
+	"age": 18,
+	"height": 65,
+	"income": 1600
+}, {
+	"age": 35,
+	"height": 82,
+	"income": 4200
+}, {
+	"age": 26,
+	"height": 71,
+	"income": 2100
+}, {
+	"age": 28,
+	"height": 72,
+	"income": 2500
+}, {
+	"age": 26,
+	"height": 71,
+	"income": 2100
+}, {
+	"age": 26,
+	"height": 71,
+	"income": 2100
+}, {
+	"age": 26,
+	"height": 71,
+	"income": 2100
+}, {
+	"age": 28,
+	"height": 72,
+	"income": 2500
+}, {
+	"age": 26,
+	"height": 71,
+	"income": 2100
+}]

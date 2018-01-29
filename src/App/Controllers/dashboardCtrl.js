@@ -5,7 +5,7 @@
 	'use strict';
 
 	angular.module('cognitionApp').controller('dashboardCtrl',
-		function ($scope, toastr, spinner) {
+		function ($scope, toastr, spinner, $http) {
 			
 			$scope.activeTab = 'tab1';
 			$scope.activePill = 'pill1';
@@ -13,7 +13,38 @@
 			$scope.test = function(text) {
 				alert(text);
 			  } 
-			  
+
+			  $('.carousel').carousel({
+				interval: 99999
+			  })
+			  var count = 0;
+
+			  var apiurl = "sample.txt"; //Your API url here
+			  $http({
+				  method: "GET",
+				  url: apiurl
+			  })
+				  .then(function mySuccess(response) {
+					console.log(response.data);
+					var users = response.data;
+					$scope.Myusers = users;
+					$scope.count = users.length;
+					// console.log("users are",count);
+					
+					var k = 0;
+					for (k; k < users.length; k++) {
+						
+						// $scope.xAxis_Data.push('Age ' + responseData.data[k].age);
+						// $scope.bar_Data.push(responseData.data[k].income);
+					}
+					console.log("users are",k);
+					
+
+				  }, function myError(response) {
+					  $scope.myResponse = response;
+					  console.log("failure", response);
+				  });
+
 			  $scope.restoreCanvas = function (e) {
 
 				// var canvas = document.getElementsByTagName("canvas");
@@ -65,7 +96,13 @@
 			GeneratePieChart($scope, 'div_piechart3');
 			// GenerateGaugeChart($scope, 'one');
 			// GenerateLineChart($scope, 'div_barchart3');
-			GenerateGaugeChart($scope, 'div_barchart3');
+			// GenerateGaugeChart($scope, 'div_barchart3');
+			$scope.value = 70;	
+			GenerateGaugeChart($scope, 'div_gauge');
+			GenerateGaugeChart($scope, 'div_gauge1');
+			GenerateGaugeChart($scope, 'div_gauge2');
+			GenerateGaugeChart($scope, 'div_gauge3');
+
 
 
 			

@@ -1,5 +1,6 @@
+<!-- heading title -->
 <div class="col-md-12">
-    <h1 class="page-title"> Dashboard > All alerts
+    <h1 class="page-title"> Alerts and Sensors
     </h1>
     <div class="page-bar">
         <ul class="page-breadcrumb">
@@ -9,81 +10,203 @@
     </div>
 </div>
 
-<div class="container col-md-10">
-    <div class="">
+<!-- Page content start -->
+<div class="container col-md-12">
+    <!-- Navs .1 -->
+    <ul class="nav nav-tabs nav-justified">
+        <li class="active" ng-click="restoreCanvas()">
+            <a data-toggle="tab" ng-click="activeTab = 'tab1'">Alarms</a>
+        </li>
+        <li class="" ng-click="restoreCanvas()">
+            <a class=" " data-toggle="tab" ng-click="activeTab = 'tab2'">Sensors</a>
+        </li>
+    </ul>
+    <!-- Content for Nav.1 -->
+    <div class="tab-content" style="padding-bottom:30px" id="tab-content">
+        <div id="home" class="tab-pane fade {{activeTab == 'tab1' ? 'in active' : ''}}">
+            <!-- Pills .1 -->
+            <div class="container col-md-12">
+                <ul class="nav nav-pills">
+                    <li class="active">
+                        <a data-toggle="tab" ng-click="activePill = 'pill1'">All alerts</a>
+                    </li>
+                    <li class="">
+                        <a data-toggle="tab" ng-click="activePill = 'pill2'">Historical alerts</a>
+                    </li>
+                </ul>
+                <!-- Content for Pills .1 -->
+                <div class="tab-content container col-md-12">
+                    <div id="home2" class="tab-pane row  fade {{activePill == 'pill1' ? 'in active' : ''}}">
+                        <!-- Pill .1 part.1 Start-->
+                        <div class="col-md-7 " ng-controller="dashboardCtrl as dash">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Alarms in the last 24 hours</div>
+                                <div class="panel-body pre-scrollable">
+                                    <div ng-repeat="product in dash.product" class="alert alert-danger alert-dismissable">
+                                        <h2 style="cursor:pointer" ng-click="test(product.name)">{{product.name}}</h2>
+                                        <p>{{product.time}} - {{product.description}}</p>
+                                        <p>time stamp</p>
+                                        {{ '1516202722000' | date:'MM/dd/yyyy @ h:mma' }} {{ '1461938400' | date:'MM/dd/yyyy @ h:mma' }}
+                                        <!-- <a  class="close" data-dismiss="alert" aria-label="close">×</a> -->
+                                        <!-- <hr> -->
+                                        <!-- <p></p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pill .1 part.1 End-->
 
-        <ul class="nav nav-tabs nav-justified">
-            <li class="active" ng-click="restoreCanvas()">
-                <a data-toggle="tab" ng-click="activeTab = 'tab1'">Alarms</a>
-            </li>
-            <li class="" ng-click="restoreCanvas()">
-                <a class=" " data-toggle="tab" ng-click="activeTab = 'tab2'">Sensors</a>
-            </li>
-        </ul>
+                        <!-- Pill .1 part.2 Start-->
+                        <div class="col-md-5 " id="p1">
+                            <div id="div_piechart3" style="width: 100%; height: 24pc;"></div>
+                        </div>
+                        <!-- Pill .1 part.2 End-->
+                    </div>
+                </div>
+                <!-- Content for Pills .1 End-->
 
-        <div class="tab-content" style="padding-bottom:30px" id="test">
+                <!-- Pill .2 Start-->
+                <div class="tab-content">
+                    <div id="menu2" class="tab-pane fade {{activePill == 'pill2' ? 'in active' : ''}}">
+                        <h1>Select Sensor</h1>
 
-            <div id="home" class="tab-pane fade {{activeTab == 'tab1' ? 'in active' : ''}}">
+                        <div class="container">
+                            <h2>Carousel Example</h2>
+                            <div id="myCarousel" class="carousel slide col-sm-8" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                </ol>
 
-                <div class="container col-md-12">
-                    <ul class="nav nav-pills">
-                        <li class="active">
-                            <a data-toggle="tab" ng-click="activePill = 'pill1'">All alerts</a>
-                        </li>
-                        <li class="">
-                            <a data-toggle="tab" ng-click="activePill = 'pill2'">Historical alerts</a>
-                        </li>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner ">
+                                    <div class="item active table">
 
-                    </ul>
+                                        <table class="table">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <img src="Images/icon-user.png" alt="Los Angeles" style=" height: 100px">
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.youtube.com/watch?v=0FgKQdc96k4&list=RDsy2F82azXko&index=9">
+                                                        <img src="Images/icon-user.png" alt="Los Angeles" style=" height: 100px"></a>
+                                                    </td>
+                                                    <td>
+                                                        <img src="Images/icon-user.png" alt="Los Angeles" style=" height: 100px">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img src="Images/icon-user.png" alt="Los Angeles" style=" height: 100px">
+                                                    </td>
+                                                    <td>
+                                                        <img src="Images/icon-user.png" alt="Los Angeles" style=" height: 100px">
+                                                    </td>
+                                                    <td>
+                                                        <img src="Images/icon-user.png" alt="Los Angeles" style=" height: 100px">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
 
-                    <div class="tab-content container col-md-12">
-                        <div id="home2" class="tab-pane row  fade {{activePill == 'pill1' ? 'in active' : ''}}">
-                            <div class="col-md-7 " ng-controller="dashboardCtrl as dash">
+                                        <!--                                   
+                                    <img src="Images/icon-user.png" alt="Los Angeles" style=" height: 100px">
+                                    <img src="Images/icon-user.png" alt="Los Angeles" style=" height: 100px">
+                                    <img src="Images/icon-user.png" alt="Los Angeles" style=" height: 100px"> -->
+                                    </div>
 
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">Alarms in the last 24 hours</div>
-                                    <div class="panel-body pre-scrollable">
+                                    <div class="item table">
+                                            <table class="table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="Images/sensor_img.JPG" alt="Los Angeles" style=" height: 100px">
+                                                            </td>
+                                                            <td>
+                                                                <img src="Images/sensor_img.JPG" alt="Los Angeles" style=" height: 100px">
+                                                            </td>
+                                                            <td>
+                                                                <img src="Images/sensor_img.JPG" alt="Los Angeles" style=" height: 100px">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="Images/sensor_img.JPG" alt="Los Angeles" style=" height: 100px">
+                                                            </td>
+                                                            <td>
+                                                                <img src="Images/sensor_img.JPG" alt="Los Angeles" style=" height: 100px">
+                                                            </td>
+                                                            <td>
+                                                                <img src="Images/sensor_img.JPG" alt="Los Angeles" style=" height: 100px">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                    </div>
 
-                                        <div ng-repeat="product in dash.product" class="alert alert-danger alert-dismissable">
-                                            <h2 style="cursor:pointer" ng-click="test(product.name)">{{product.name}}</h2>
-                                            <p>{{product.time}} - {{product.description}}</p>
-                                            <p>time stamp</p>
-                                            {{ '1516202722000' | date:'MM/dd/yyyy @ h:mma' }} {{ '1461938400' | date:'MM/dd/yyyy @ h:mma' }}
-                                            <!-- <a  class="close" data-dismiss="alert" aria-label="close">×</a> -->
-                                            <!-- <hr> -->
-                                            <!-- <p></p> -->
-
-                                        </div>
+                                    <div class="item table">
+                                            <table class="table">
+                                                    <tbody>
+                                                            <tr>
+                                                                    <td>
+                                                                        <img src="Images/icon-user.png" alt="Los Angeles" style=" height: 100px">
+                                                                    </td>
+                                                                    <td>
+                                                                        <img src="Images/icon-user.png" alt="Los Angeles" style=" height: 100px">
+                                                                    </td>
+                                                                    <td>
+                                                                        <img src="Images/icon-user.png" alt="Los Angeles" style=" height: 100px">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <img src="Images/icon-user.png" alt="Los Angeles" style=" height: 100px">
+                                                                    </td>
+                                                                    <td>
+                                                                        <img src="Images/icon-user.png" alt="Los Angeles" style=" height: 100px">
+                                                                    </td>
+                                                                    <td>
+                                                                        <img src="Images/icon-user.png" alt="Los Angeles" style=" height: 100px">
+                                                                    </td>
+                                                                </tr>
+                                                    </tbody>
+                                                </table>
                                     </div>
                                 </div>
 
-                            </div>
-                            <div class="col-md-5 " id="p1">
-                                <!-- <p>Sample text1</p> -->
-                                <div id="div_piechart3" style="width: 100%; height: 24pc;"></div>
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" data-target="#myCarousel" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" data-target="#myCarousel" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="tab-content">
-                        <div id="menu2" class="tab-pane fade {{activePill == 'pill2' ? 'in active' : ''}}">
-                            <h1>Select Sensor</h1>
-                        </div>
                     </div>
-
                 </div>
             </div>
+        </div>
 
-            <div id="menu1" class="tab-pane fade {{activeTab == 'tab2' ? 'in active' : ''}} col-md-12 " style="">
-                <!-- Write code here -->
-                <div class="pull-left">
-                    <select class="form-control" ng-options="area for area in areas" ng-model="selectedArea">
-                    </select>
-                </div>
-                <!-- <p style="width:100%; margin: 0 auto; display: inline-block; text-align:center">{{}}</p> -->
-                <!-- <div id="div_linechart2"  style="width:100%; height: 20pc;  " class="col-md-12">                        
+        <div id="menu1" class="tab-pane fade {{activeTab == 'tab2' ? 'in active' : ''}} col-md-12 " style="">
+            <!-- Write code here -->
+            <h3>Please select the area you wish to view</h3>            
+            <div class="pull-left">
+                <select class="form-control" ng-options="area for area in areas" ng-model="selectedArea">
+                </select>
+            </div>
+            <br>
+            <h1 style="text-align:center"> {{selectedArea}}</h1>
+            <!-- <p style="width:100%; margin: 0 auto; display: inline-block; text-align:center">{{}}</p> -->
+            <!-- <div id="div_linechart2"  style="width:100%; height: 20pc;  " class="col-md-12">                        
                </div> -->
-                <!-- <div class="container-fluid">
+            <!-- <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-10">
                             <div id="div_linechart3" style="width:100%; height: 20pc;  " class="col-md-12">
@@ -91,40 +214,56 @@
                         </div>
                     </div>
                 </div> -->
-                <div class="col-md-12" style="margin-top: 1pc">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="portlet box blue">
-                                <div class="portlet-title">
-                                    <div class="caption">
-                                        {{selectedArea | json}} </div>
-                                    <i class="fa fa-tachometer icon-pull-right"></i>
+            <!-- <div class="col-md-12" style="margin-top: 1pc"> -->
+            <!-- <div class="row"> -->
+            <div class="table" ng-controller="dashboardCtrl">
+                <table class="table">
+                        <!-- <thead>
+                            <th>
+                                {{selectedArea | json}}
+                            </th>
+                            <th>
+                                {{selectedArea | json}}
+                            </th>
+                            <th>
+                                {{selectedArea | json}}
+                            </th>
+                            <th>
+                                {{selectedArea | json}}
+                            </th>
+                        </thead> -->
+                    <tbody>
+                        <tr ng-repeat="user in Myusers">
+                           <td>{{user.age}}
+                                <div id="div_gauge" style="width: 150%; height: 30pc;"></div>                               
+                           </td>
+                           <td>{{user.height}}</td>
+                           <td>{{user.income}}</td>
+                           
+                            <!-- <td>
+                                <div id="div_gauge" style="width: 100%; height: 30pc;"></div>
+                            </td>
+                            <td>
+                                <div id="div_gauge1" style="width: 100%; height: 30pc;"></div>
+                            </td>
+                            <td>
+                                <div id="div_gauge2" style="width: 100%; height: 30pc;"></div>
+                            </td>
+                            <td>
+                                <div id="div_gauge3" style="width: 100%; height: 30pc;"></div>
+                            </td> -->
+                        </tr>
 
-                                </div>
-                                <!-- <div class="portlet-body">
-                                        <div id="div_barchart2" style="width: 100%; height: 20pc;"></div>
-                                    </div> -->
-                                <div class="portlet-body">
-                                    <div id="div_barchart3" style="width: 100%; display: block; height: 20pc;"></div>
-
-                                    <!-- <div id="main" style="width: 600px;height:400px;"></div> -->
-                                    <script>
-                                        // Create a pie chart:
-                                       
-                                    </script>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    </tbody>
+                </table>
             </div>
-
+            <!-- </div>
+            </div> -->
         </div>
 
     </div>
-</div>
-</div>
-<script>
-    $('.page-sidebar-menu').find('a[href="#!dashboard"]').closest('li').addClass('active');
-</script>
+    <!-- Page content end -->
+
+    <script>
+        $('.page-sidebar-menu').find('a[href="#!dashboard"]').closest('li').addClass('active');
+    </script>
