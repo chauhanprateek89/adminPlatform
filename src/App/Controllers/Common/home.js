@@ -28,7 +28,7 @@
 			GeneratePieChart($scope, 'div_piechart');
  
 			//data needed for bar chaart
-			$scope.xAxis_Data = ['Jan', 'Feb', 'Mar', 'Apr', 'May'];
+			$scope.xAxis_Data = ["1517173009","1517173009","1516993904","1516993904"	];
 			$scope.bar_Data = [10, 15, 25, 20, 15];
 
 			GenerateBarChart($scope, 'div_barchart');

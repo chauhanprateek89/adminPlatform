@@ -19,25 +19,29 @@
 			  })
 			  var count = 0;
 
+			//   Get data from local sample file
+			// Replace with API req from server
 			  var apiurl = "sample.txt"; //Your API url here
 			  $http({
 				  method: "GET",
 				  url: apiurl
 			  })
 				  .then(function mySuccess(response) {
-					console.log(response.data);
+					// console.log(response.data);
 					var users = response.data;
 					$scope.Myusers = users;
 					$scope.count = users.length;
-					// console.log("users are",count);
-					
 					var k = 0;
 					for (k; k < users.length; k++) {
 						
 						// $scope.xAxis_Data.push('Age ' + responseData.data[k].age);
 						// $scope.bar_Data.push(responseData.data[k].income);
+					GenerateGaugeChart($scope, 'div_gauge'+k);
+					
+						
 					}
-					console.log("users are",k);
+					$scope.k = k;
+					console.log("users are",k);	
 					
 
 				  }, function myError(response) {
@@ -97,11 +101,12 @@
 			// GenerateGaugeChart($scope, 'one');
 			// GenerateLineChart($scope, 'div_barchart3');
 			// GenerateGaugeChart($scope, 'div_barchart3');
+			//value for gauge chart
 			$scope.value = 70;	
-			GenerateGaugeChart($scope, 'div_gauge');
-			GenerateGaugeChart($scope, 'div_gauge1');
-			GenerateGaugeChart($scope, 'div_gauge2');
-			GenerateGaugeChart($scope, 'div_gauge3');
+			// GenerateGaugeChart($scope, 'div_gauge');
+			// GenerateGaugeChart($scope, 'div_gauge1');
+			// GenerateGaugeChart($scope, 'div_gauge2');
+			// GenerateGaugeChart($scope, 'div_gauge3');
 
 
 

@@ -3,6 +3,47 @@ function GenerateBarChart($scope, div_id) {
 		var dom = document.getElementById(div_id);
 		var myChart = echarts.init(dom);
 
+		var intDate = [];
+		var formattedTime = [];
+		for (j = 0; j < ($scope.xAxis_Data).length; j++) {
+			// console.log("J is",j);
+			intDate[j] = parseInt($scope.xAxis_Data[j]);
+			// console.log("Int date",intDate); 
+
+			// var stringDate = parseInt($scope.xAxis_Data);
+			// console.log(typeof parseInt($scope.xAxis_Data));
+
+			intDate[j] = new Date(intDate[j] * 1000);
+			// console.log("something",$scope.xAxis_Data );
+			// var date = new Date($scope.xAxis_Data * 1000);
+			// Hours part from the timestamp
+			var year = [];
+			var day = [];
+			var month = [];
+			var hours = [];
+			var minutes = [];
+			var seconds = [];
+
+			year[j] = intDate[j].getFullYear();
+			month[j] = intDate[j].getMonth();
+			month[j] = month[j] + 1;
+			day[j] = intDate[j].getDay();
+			hours[j] = intDate[j].getHours();
+
+			// Minutes part from the timestamp
+			minutes[j] = "0" + intDate[j].getMinutes();
+
+			// Seconds part from the timestamp
+			seconds[j] = "0" + intDate[j].getSeconds();
+
+			// Will display time in 10:30:23 format
+			formattedTime[j] = hours[j] + ':' + minutes[j].substr(-2) + ':' + seconds[j].substr(-2);
+			// formattedTime[j] = day[j] + '/' + month[j] + '/' + year[j] + ':-' + hours[j] + ':' + minutes[j].substr(-2) + ':' + seconds[j].substr(-2);
+			// console.log("test time is", formattedTime[j]);
+
+		}
+
+
 		var option = {
 			color: ['#3398DB'],
 			title: {
@@ -45,7 +86,9 @@ function GenerateBarChart($scope, div_id) {
 			xAxis: [{
 				type: 'category',
 				name: '',
-				data: $scope.xAxis_Data,
+				// data: $scope.xAxis_Data,
+				data: formattedTime,
+				// data: formattedTime,
 				axisTick: {
 					alignWithLabel: true
 				}
@@ -56,9 +99,41 @@ function GenerateBarChart($scope, div_id) {
 			}],
 			series: [{
 				name: $scope.bar_Name,
-				type: 'bar',
+				type: 'line',
 				barWidth: '60%',
 				data: $scope.bar_Data,
+				markLine: {
+					data: [
+					  // 1st line we want to draw
+					  [
+						// start point of the line
+						// we have to defined line attributes only here (not in the end point)
+						{
+						  xAxis: formattedTime[0],
+						  yAxis: -18,
+						  symbol: 'none',
+						  lineStyle: {
+							normal: {
+							  color: "#00F"
+							}
+						  },
+						  label: {
+							normal: {
+							  show: true,
+							  position: 'end',
+							  formatter: 'Threshold'
+							}
+						  }
+						},
+						// end point of the line
+						{
+						  xAxis: formattedTime[(formattedTime.length)-1],
+						  yAxis: -18,
+						  symbol: 'none'
+						}
+					  ]
+					]
+				  },
 				itemStyle: {
 					normal: {
 						label: {
@@ -79,6 +154,18 @@ function GenerateBarChart($scope, div_id) {
 				// }
 			]
 		};
+
+		//attempt for epoch to hr
+		// Create a new JavaScript Date object based on the timestamp
+		// multiplied by 1000 so that the argument is in milliseconds, not seconds.
+
+		// console.log("test time is", formattedTime);
+
+
+		// console.log("Temperature is: ", $scope.temperature);
+		// console.log("Time js", $scope.timestamp);
+
+
 		if (option && typeof option === "object") {
 			myChart.setOption(option, true);
 		}
@@ -227,6 +314,7 @@ function GeneratePieChart($scope, div_id) {
 	}, 500);
 }
 
+
 function GenerateLineChart($scope, div_id) {
 	setTimeout(function () {
 		var dom = document.getElementById(div_id);
@@ -336,11 +424,11 @@ function GenerateGaugeChart($scope, div_id) {
 		};
 
 		//setInterval(function () {
-			//option.series[0].data[0].value = (Math.random() * 100).toFixed(2) - 0;
-			option.series[0].data[0].value = $scope.value;
-			if (option && typeof option === "object") {
-				myChart.setOption(option, true);
-			}
+		//option.series[0].data[0].value = (Math.random() * 100).toFixed(2) - 0;
+		option.series[0].data[0].value = $scope.value;
+		if (option && typeof option === "object") {
+			myChart.setOption(option, true);
+		}
 		//}, 2000);		
 	}, 500);
 }
