@@ -2,7 +2,7 @@
 <div class="col-md-12">
     <h1 class="page-title"> Alerts and Sensors
     </h1>
-    <div class="page-bar">
+    <div class="page-bar" style="margin-bottom: 10px">
         <ul class="page-breadcrumb">
             <li>
                 <i class="icon-info"></i>&nbsp; An overview of your alerts </li>
@@ -198,8 +198,8 @@
         <!-- Nav 1 end -->
 
         <!-- Nav 2 start -->
-        <div id="menu1" class="tab-pane fade {{activeTab == 'tab2' ? 'in active' : ''}} col-md-12 " style="background-color:grey">
-            <h3>Please select the area you wish to view</h3>
+        <div id="menu1" class="tab-pane fade {{activeTab == 'tab2' ? 'in active' : ''}} col-md-12 ">
+            <p>Please select the area you wish to view</p>
             <div class="pull-left">
                 <select class="form-control" ng-options="area for area in areas" ng-model="selectedArea">
                 </select>
@@ -208,18 +208,27 @@
             <h1 style="text-align:center"> {{selectedArea}}</h1>
             <div class="col-md-10">
                 <div class="table table-responsive" ng-controller="dashboardCtrl">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
                     <table class="table">
                         <tbody>
-                            <tr ng-repeat="user in Myusers" id="p1">
-                                <td id="p1">{{user.age}}
+                            <td ng-repeat="user in Myusers" id="p1"> 
+                                <!-- <td id="p1">{{user.age}} -->
+<!--                                     
                                     <script>
                                         // var test = '{{k}}';
-                                        for(i=0;i<'{{k}}';i++)
-                                        console.log(i,"k is k kisisisnakjansdlk");
+                                        var i=0;
+                                        for(i;i<'{{k}}';i++){
 
-                                        </script>
+                                        }
+                                        console.log($scope.k,"k is k kisisisnakjansdlk");
+
+                                        </script> -->
                                     <!-- <div id="div_gauge{{k}}" style="width: 250%; height: 250%;"></div> -->
-                                    <div ng-attr-id="{{ 'div_gauge' + k }}"></div>
+                                    <div id="{{ 'div_gauge' + user.number }}"  style="width: 250%; height: 250%;"></div>
+                                    <!-- <div id="div_gauge1"></div> -->
+                                    <!-- <h1>{{}}</h1> -->
+                                <!-- </td> -->
+                               <p > {{user.age}} </p>
                                 </td>
                                 <!-- <td id="p1">{{user.height}}
                                     <div id="div_gauge1" style="width: 250%; height: 250%;"></div>
@@ -230,6 +239,7 @@
                             </tr>
                         </tbody>
                     </table>
+                    <span class="glyphicon glyphicon-chevron-right"></span>                        
                 </div>
             </div>
         </div>

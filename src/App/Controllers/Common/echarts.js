@@ -114,7 +114,7 @@ function GenerateBarChart($scope, div_id) {
 						  symbol: 'none',
 						  lineStyle: {
 							normal: {
-							  color: "#00F"
+							  color: "#ff0000"
 							}
 						  },
 						  label: {
